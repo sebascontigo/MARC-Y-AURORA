@@ -1,0 +1,121 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "kiosapi": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "KiosAPI",
+      "options": {
+        "baseURL": "https://kiosapi.com/v1",
+        "apiKey": "{env:KIOSAPI_API_KEY}"
+      },
+      "models": {
+        "claude-opus-5": {
+          "name": "01 Claude Opus 5 · Anthropic · OK"
+        },
+        "moonshotai/kimi-k3": {
+          "name": "02 Kimi K3 · Moonshot · OK lento"
+        },
+        "minimaxai/minimax-m3": {
+          "name": "03 MiniMax M3 · MiniMax · OK"
+        },
+        "glm-5.2": {
+          "name": "04 GLM 5.2 · Z.AI · OK rapido"
+        },
+        "glm-5.3-flash": {
+          "name": "05 GLM 5.3 Flash · Z.AI · OK"
+        },
+        "deepseek-v4-flash": {
+          "name": "06 DeepSeek V4 Flash · DeepSeek · OK rapido"
+        },
+        "oc/muse-spark-1.3-contributor": {
+          "name": "07 Muse Spark 1.3 · Meta · OK"
+        },
+        "oc/muse-spark-1.2-contributor": {
+          "name": "08 Muse Spark 1.2 · Meta · OK"
+        },
+        "nvidia/nemotron-3-super-120b-a12b": {
+          "name": "09 Nemotron 3 Super 120B · Nvidia · OK"
+        },
+        "Qwen/Qwen3.8-27B": {
+          "name": "10 Qwen 3.8 27B · Alibaba · OK rapido"
+        },
+        "oc/mimo-v2.5": {
+          "name": "11 Mimo 2.5 · Xiaomi · OK"
+        },
+        "oc/nemotron-3.5-lightning": {
+          "name": "12 Nemotron 3.5 Lightning · Nvidia · OK"
+        },
+        "openai/gpt-oss-20b": {
+          "name": "13 GPT OSS 20B · OpenAI · OK"
+        },
+        "oc/ling-3.0-flash-fin": {
+          "name": "14 Ling 3.0 Flash · OK rapido"
+        },
+        "agnes-2.5-flash": {
+          "name": "15 Agnes 2.5 Flash · AgnesAI · OK"
+        },
+        "agnes-2.0-flash": {
+          "name": "16 Agnes 2.0 Flash · AgnesAI · OK"
+        },
+        "oc/big-pickle": {
+          "name": "17 Big Pickle · OpenCode · OK"
+        },
+        "glm-5.3": {
+          "name": "18 GLM 5.3 · Z.AI · inestable"
+        },
+        "oc/nemotron-3-ultra": {
+          "name": "19 Nemotron 3 Ultra 550B · Nvidia · inestable"
+        },
+        "hy3": {
+          "name": "20 Hy3 · Tencent · inestable"
+        },
+        "qwen3.8-flash": {
+          "name": "21 Qwen 3.8 Flash · Alibaba · caido"
+        },
+        "oc/laguna-s-2.1": {
+          "name": "22 Laguna S 2.1 · caido"
+        },
+        "grok-4.6": {
+          "name": "23 Grok 4.6 · xAI · OK"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "24 DeepSeek V4 Pro · DeepSeek · OK"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro-0813": {
+          "name": "25 DeepSeek V4 Pro 0813 · DeepSeek · OK"
+        },
+        "grok-composer-2.5-fast": {
+          "name": "26 Grok Composer 2.5 Fast · xAI · OK"
+        },
+        "Qwen/Qwen3.8-2.4T-A95B": {
+          "name": "27 Qwen 3.8 2.4T · Alibaba · OK"
+        }
+      }
+    },
+    "experiential": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Experiential",
+      "options": {
+        "baseURL": "https://api.experientiallabs.ai/v1",
+        "apiKey": "{env:EXPLABS_API_KEY}"
+      },
+      "models": {
+        "gpt-6-astra": {
+          "name": "E1 GPT-6 Astra · pide tarjeta"
+        },
+        "claude-fable-5.1": {
+          "name": "E2 Claude Fable 5.1 · pide tarjeta"
+        },
+        "gpt-5.6-luna": {
+          "name": "E3 GPT-5.6 Luna · pide tarjeta"
+        },
+        "deepseek-v4-flash": {
+          "name": "E4 DeepSeek V4 Flash · pide tarjeta"
+        },
+        "qwen3.8-27b": {
+          "name": "E5 Qwen 3.8 27B · pide tarjeta"
+        }
+      }
+    }
+  }
+}

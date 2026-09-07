@@ -1,0 +1,53 @@
+=== 1. REELS FINALES 9:16 (deben ser 1080x1920, ~30s, con audio) ===
+  [OK ] REEL_1_GABI_9x16.mp4             1080x1920  30.1s  audio=1  h264  2.08 MB
+  [OK ] REEL_1_GABI_9x16_v2.mp4          1080x1920  30.0s  audio=1  h264  3.46 MB
+  [OK ] REEL_2_VICENT_9x16.mp4           1080x1920  30.1s  audio=1  h264  1.96 MB
+  [OK ] REEL_2_VICENT_9x16_v2.mp4        1080x1920  30.0s  audio=1  h264  5.07 MB
+  [OK ] REEL_3_ELENA_9x16.mp4            1080x1920  30.1s  audio=1  h264  2.14 MB
+  [OK ] REEL_3_ELENA_9x16_v2.mp4         1080x1920  30.0s  audio=1  h264  4.72 MB
+  [OK ] REEL_4_ANA_9x16.mp4              1080x1920  30.1s  audio=1  h264  1.94 MB
+
+=== 2. VIDEOS FUENTE / VERSIONES WEB (formato original) ===
+  ANA_TESTIMONIO_4_web.mp4             720x406  2220.2s  audio=1  55.1 MB
+  ELENA_TESTIMONIO_3_web.mp4           720x406  1372.0s  audio=1  33.91 MB
+  GABI_TESTIMONIO_1_web.mp4            720x406  1346.6s  audio=1  29.03 MB
+  VICENT_TESTIMONIO_2_web.mp4          720x406  1353.2s  audio=1  33.33 MB
+
+=== 3. IMAGENES CLAVE (dimensiones reales) ===
+  -- LANZAMIENTO MARC (2 archivos)
+     POST_PLAZAS_SEPTIEMBRE_1080.jpg                1080x1080 RGB
+     STORY_PLAZAS_SEPTIEMBRE_1080x1920.jpg          1080x1920 RGB
+  -- LANZAMIENTO AURORA (2 archivos)
+     POST_SOBERANIA_VITAL_1080.jpg                  1080x1080 RGB
+     STORY_SOBERANIA_VITAL_1080x1920.jpg            1080x1920 RGB
+  -- PORTADAS MARC (6 archivos)
+     CONTACTO.png                                   1080x1080 RGB
+     INICIO.png                                     1080x1080 RGB
+     METODO.png                                     1080x1080 RGB
+     PODCAST.png                                    1080x1080 RGB
+     PROGRAMA.png                                   1080x1080 RGB
+     TESTIMONIOS.png                                1080x1080 RGB
+  -- PORTADAS AURORA (3 archivos)
+     CONTACTO.png                                   1080x1080 RGB
+     INICIO.png                                     1080x1080 RGB
+     METODO.png                                     1080x1080 RGB
+  -- BRAND KIT MARC (4 archivos)
+     CARRUSEL_1_portada_ejemplo.jpg                 1080x1350 RGB
+     POST_1_portada_ejemplo.jpg                     1080x1350 RGB
+     QUOTE_1_ejemplo.jpg                            1080x1080 RGB
+     STORY_1_ejemplo.jpg                            1080x1920 RGB
+  -- QR (1 archivos)
+     QR_MARCSOUZA7.png                              235x270 RGBA
+
+=== 4. BARRIDO DE SECRETOS POR PATRON (solo ruta + tipo, nunca el valor) ===
+  archivos de texto revisados: 433
+  ARCHIVOS CON PATRON SENSIBLE: 1  (valores NO mostrados)
+     [password_campo]  MARC\04_Instagram\BORRADOR_RESPUESTA_MARC_INSTAGRAM.md
+
+=== 5. RIESGO DE VERSIONADO (rutas que NO deben entrar en git) ===
+  EXISTE  00_CONTROL/.ig-profile       archivos= 2705  perfil de navegador con datos de sesion/cookies
+  EXISTE  .netlify                     archivos=    2  estado de despliegue
+  no      .mcp-sqlite                  archivos=    0  base local de herramientas
+  EXISTE  SCAN_TMP                     archivos=    8  temporales de escaneo
+
+FIN

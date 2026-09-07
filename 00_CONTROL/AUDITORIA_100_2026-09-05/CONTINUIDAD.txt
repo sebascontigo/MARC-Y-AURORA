@@ -1,0 +1,96 @@
+=== 1. SESIONES EXPORTADAS DE AGENTES ===
+  sesiones exportadas: 275   peso total: 26.2 MB
+  por mes: {'2026-07': 2, '2026-08': 167, '2026-09': 106}
+  rango: 2026-07-18 -> 2026-09-05
+  -- 15 sesiones mas extensas (probable trabajo real, no saludos)
+         3756 KB  2026-09-01_centro-control-ia_cb8b1e.md
+         1430 KB  2026-09-05_bayona-co-v2_cd8bad.md
+         1376 KB  2026-08-29_start-park-ia_db993c.md
+         1240 KB  2026-09-01_gpt-segurity-v1_a0b46a.md
+         1202 KB  2026-09-05_1_6Rq7bg.md
+          886 KB  2026-09-05_tablero-maestro_759665.md
+          810 KB  2026-08-27_proyecto-empresa-ia-marc-y-aurora_2481a1.md
+          757 KB  2026-08-31_100-cosas-x-col_97b323.md
+          739 KB  2026-09-02_fotos_fc8faa.md
+          704 KB  2026-08-27_config-qwen_adb11f.md
+          641 KB  2026-09-03_enviar-cv-empleos_b2bb04.md
+          632 KB  2026-08-23_gmail-com_4da4d4.md
+          601 KB  2026-09-05_milanuncios_a689aa.md
+          581 KB  2026-08-27_bayona-fitness-v1_4cbf5a.md
+          575 KB  2026-08-19_whatsapp_5ca03f.md
+  -- sesiones triviales (<1,5 KB, ruido): 109
+
+=== 2. CONFIGURACION DE AGENTES EN ESTE WORKSPACE ===
+  -- opencode.json (proyecto)  (3095 car.)
+     claves: $schema, provider, provider.kiosapi, provider.experiential
+     provider 'kiosapi': 22 modelos
+     provider 'experiential': 5 modelos
+  -- AGENTS.md (MARC)  (2495 car.)
+  -- MCP MARC  (482 car.)
+     claves: servers, servers.filesystem, servers.sqlite-marc
+
+=== 3. AGENTES/SKILLS DECLARADOS DENTRO DE MARC/.github ===
+  copilot-instructions.md                                         860 B
+  desktop.ini                                                      68 B
+  agents\01_SUPER_AGENT.agent.md                                2,647 B
+  agents\02_RESEARCHER.agent.md                                 1,274 B
+  agents\03_CODER.agent.md                                      1,193 B
+  agents\04_DEBUGGER.agent.md                                   1,243 B
+  agents\05_ARCHITECT.agent.md                                  1,300 B
+  agents\06_CODE_REVIEWER.agent.md                              1,254 B
+  agents\07_BROWSER_AGENT.agent.md                              1,514 B
+  agents\08_AUTOMATION_AGENT.agent.md                           1,340 B
+  agents\09_DATA_ANALYST.agent.md                               1,347 B
+  agents\10_DOCUMENT_AGENT.agent.md                             1,458 B
+  agents\11_MARKETING_AGENT.agent.md                            1,291 B
+  agents\12_SECURITY_AGENT.agent.md                             1,428 B
+  agents\13_GIT_AGENT.agent.md                                  1,509 B
+  agents\14_PROJECT_MANAGER.agent.md                            1,379 B
+  agents\desktop.ini                                               68 B
+  hooks\audit-log.json                                            241 B
+  hooks\audit.ps1                                               1,123 B
+  hooks\desktop.ini                                                68 B
+  hooks\guard.ps1                                               2,034 B
+  hooks\security-guard.json                                       240 B
+  hooks\scripts\desktop.ini                                        68 B
+  skills\desktop.ini                                               68 B
+  skills\browser-automation\SKILL.md                            1,560 B
+  skills\browser-automation\desktop.ini                            68 B
+  skills\data-analysis\SKILL.md                                 1,424 B
+  skills\data-analysis\desktop.ini                                 68 B
+  skills\docx\SKILL.md                                            982 B
+  skills\docx\desktop.ini                                          68 B
+  skills\google-workspace\SKILL.md                              1,178 B
+  skills\google-workspace\desktop.ini                              68 B
+  skills\pdf\SKILL.md                                           1,030 B
+  skills\pdf\desktop.ini                                           68 B
+  skills\web-research\SKILL.md                                  1,250 B
+  skills\web-research\desktop.ini                                 140 B
+  skills\xlsx-csv\SKILL.md                                      1,167 B
+  skills\xlsx-csv\desktop.ini                                      68 B
+
+=== 4. AUTOMATIZACIONES ACTIVAS DETECTADAS ===
+  sin carpeta AUTOMATIZACION
+
+=== 5. DOCUMENTOS RECTORES Y SU FRESCURA ===
+  disco=2026-08-18 (18d)  declarada=2026-08-18             README.md
+  disco=2026-09-04 ( 1d)  declarada=2026-09-04             00_EMPIEZA_AQUI.md
+  disco=2026-08-18 (18d)  declarada=sin fecha declarada    MASTER_CONTEXT.md
+  disco=2026-09-05 ( 0d)  declarada=2026-08-25             MASTER_STATUS.md
+  disco=2026-08-31 ( 5d)  declarada=2026-08-18             MASTER_TASKS.md
+  disco=2026-08-18 (18d)  declarada=sin fecha declarada    MASTER_DECISIONS.md
+  disco=2026-09-05 ( 0d)  declarada=sin fecha declarada    MASTER_CHANGELOG.md
+  disco=2026-08-28 ( 8d)  declarada=2026-08-18             MASTER_ASSETS.md
+  disco=2026-08-29 ( 7d)  declarada=sin fecha declarada    MASTER_ACCESS.md
+  disco=2026-08-18 (18d)  declarada=sin fecha declarada    MASTER_KPIS.md
+  disco=2026-08-18 (18d)  declarada=2026-08-18             MASTER_ROADMAP.md
+  disco=2026-09-04 ( 1d)  declarada=sin fecha declarada    MARC/00_DONDE_ESTA_TODO.md
+  disco=2026-09-04 ( 1d)  declarada=sin fecha declarada    AURORA/00_DONDE_ESTA_TODO.md
+  disco=2026-08-25 (11d)  declarada=2026-08-18             MARC/PENDIENTE_SEBASTIAN.md
+  disco=2026-09-01 ( 4d)  declarada=sin fecha declarada    MARC/KIT_PUBLICACION_10MIN.md
+  disco=2026-09-04 ( 1d)  declarada=sin fecha declarada    MARC/COLA_VERIFICADA_2026-09-04.md
+  disco=2026-08-27 ( 9d)  declarada=sin fecha declarada    TAREAS_SEBASTIAN_HOY.md
+  disco=2026-08-28 ( 8d)  declarada=sin fecha declarada    INFORME_FINAL_2026-08-28.md
+  disco=2026-09-04 ( 1d)  declarada=sin fecha declarada    HANDOFF_ZED.md
+
+FIN

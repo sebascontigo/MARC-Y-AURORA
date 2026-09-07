@@ -1,0 +1,63 @@
+# ------------------------------------------------------------------ #
+# .gitignore del workspace MARC Y AURORA
+# Objetivo: que NUNCA se cuelen por accidente datos de sesion, cookies
+# ni credenciales en un commit. Protege aunque alguien haga `git add .`.
+# ------------------------------------------------------------------ #
+
+# Perfil de navegador con cookies/sesion (riesgo de credenciales)
+00_CONTROL/.ig-profile/
+
+# Temporales de escaneo / pruebas de modelos
+SCAN_TMP/
+
+# Estado de hooks y auditoria de herramientas
+.mimosa/
+.ruff_cache/
+.mcp-sqlite/
+
+# Automatizaciones con variables de entorno/claves
+AUTOMATIZACION/
+
+# Estado de despliegue local (no es necesario versionarlo)
+**/.netlify/state.json
+
+# Backups generados en auditorias del agente
+*.bak_*
+*.bak*
+
+# Chats exportados de WhatsApp: fuente de verdad en el filesystem,
+# pero contienen datos personales -> fuera de git
+**/Chat de WhatsApp*/
+**/Chat de WhatsApp con */
+MARC/03_Chat_WhatsApp_MARC/
+AURORA/09_Chat_WhatsApp_AURORA/
+MARC/03_Conversaciones/
+MARC/00_DESCARTADO/
+MARC/28_PRESENTACION/_descartado/
+
+# Exports de sesiones de agentes: contienen conversaciones y, a veces,
+# patrones de credenciales (verificado 5-sep: 61 archivos con coincidencias)
+00_CONTROL/HISTORIAL_SESIONES/
+00_CONTROL/01_PROMPTS_Y_CONTEXTO/
+
+# Scripts de login/estado de Instagram: contienen campos usuario/credencial
+00_CONTROL/_ig_login*.py
+00_CONTROL/_ig_state*.py
+00_CONTROL/_ig_profile*.py
+
+# Scripts PowerShell con variables de entorno/claves
+00_CONTROL/*.ps1
+**/VIGIA_EXPERIENTIAL/*.ps1
+
+# Sesiones Zed (transcripts, mismo riesgo que HISTORIAL_SESIONES)
+00_CONTROL/SESIONES_ZED/
+
+# Videos >100MB (GitHub los rechaza; viven en Drive + disco local)
+MARC/21_TESTIMONIOS/VIDEOS/
+MARC/24_MEDIA/03_TALLER_EMPRENDIMIENTO/
+MARC/29_DRIVE/Videos_Reels/
+MARC/29_DRIVE/Testimonios/
+
+# Ruido Windows/Python
+desktop.ini
+__pycache__/

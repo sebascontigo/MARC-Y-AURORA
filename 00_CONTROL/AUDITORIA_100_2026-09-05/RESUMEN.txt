@@ -1,0 +1,88 @@
+== TOP CARPETAS (nº archivos / MB) ==
+ 2570      385.7 MB  00_CONTROL/.ig-profile
+  275      125.2 MB  ARCHIVO_DOCUMENTAL/06_ARCHIVO_HISTORICO
+  216       61.7 MB  MARC/Chat de WhatsApp con MARC
+   84       11.6 MB  MARC/Chat de WhatsApp con MARC (ÚLTIMO EL MÁS RECIENTE)
+   63       17.0 MB  MARC/20_PRODUCTO_DESPIERTA
+   36        0.0 MB  AURORA/00_AUDITORIA_MAESTRA
+   35        2.6 MB  MARC/04_Instagram
+   30        0.1 MB  MARC/CONTENIDO
+   29      986.4 MB  MARC/21_TESTIMONIOS
+   26        0.0 MB  MARC/.github
+   18        2.1 MB  AURORA/04_Instagram
+   18     1837.4 MB  MARC/24_MEDIA
+   14       50.9 MB  MARC/22_LEAD_MAGNET_EBOOK
+   12        2.6 MB  MARC/23_ESTRATEGIA_NEGOCIO
+   12        0.3 MB  MARC/27_BRAND_KIT
+   10        5.0 MB  MARC/25_MARCA_PERSONAL
+   10        0.9 MB  MARC/APP_DESPIERTA
+    7        0.2 MB  AURORA/06_BRAND_KIT
+    7        1.5 MB  MARC/01_Contexto_Alineacion
+    5        0.0 MB  00_CONTROL/01_PROMPTS_Y_CONTEXTO
+
+== ANOMALIAS por tipo ==
+  664  nombre
+   95  vacio
+   17  pesado
+    6  backup
+
+== PESADOS (>20MB) ==
+    462.5 MB  MARC\24_MEDIA\03_TALLER_EMPRENDIMIENTO\Emprendimiento desde el Ser - 3.mp4
+    449.7 MB  MARC\24_MEDIA\03_TALLER_EMPRENDIMIENTO\Emprendimiento desde el Ser - 2.mp4
+    341.0 MB  MARC\24_MEDIA\03_TALLER_EMPRENDIMIENTO\Emprendimiento desde el Ser - 4.mp4
+    315.8 MB  MARC\24_MEDIA\03_TALLER_EMPRENDIMIENTO\Emprendimiento desde el Ser - 1.mp4
+    283.6 MB  MARC\21_TESTIMONIOS\VIDEOS\ANA TESTIMONIO 4.mp4
+    175.8 MB  MARC\21_TESTIMONIOS\VIDEOS\ELENA    TESTIMONIO 3.mp4
+    173.3 MB  MARC\21_TESTIMONIOS\VIDEOS\VICENT        TESTIMONIO 2.mp4
+    173.3 MB  MARC\21_TESTIMONIOS\VIDEOS\GABI TESTIMONIO 1.mp4
+     86.2 MB  MARC\24_MEDIA\03_TALLER_EMPRENDIMIENTO\Video Con su salud.mp4
+     55.1 MB  MARC\21_TESTIMONIOS\VERSIONES_WEB\ANA_TESTIMONIO_4_web.mp4
+     44.3 MB  MARC\24_MEDIA\02_PODCAST_RECONECTA\Reconecta-t 2 Conocerse_part#3.mp3
+     40.9 MB  MARC\24_MEDIA\02_PODCAST_RECONECTA\Reconecta-t 4.mp3
+     34.2 MB  MARC\24_MEDIA\02_PODCAST_RECONECTA\Reconecta-t 3 De_que_depende_la_felicidad_#2.mp3
+     33.9 MB  MARC\21_TESTIMONIOS\VERSIONES_WEB\ELENA_TESTIMONIO_3_web.mp4
+     33.4 MB  MARC\24_MEDIA\02_PODCAST_RECONECTA\Reconecta-t 1 Porque_algunos_SI_y_otros_NO_#1 (1).mp3
+     33.3 MB  MARC\21_TESTIMONIOS\VERSIONES_WEB\VICENT_TESTIMONIO_2_web.mp4
+     29.0 MB  MARC\21_TESTIMONIOS\VERSIONES_WEB\GABI_TESTIMONIO_1_web.mp4
+
+== VACIOS (primeros 25) ==
+  00_CONTROL\.ig-profile\Crashpad\metadata
+  00_CONTROL\.ig-profile\Default\Account Web Data-journal
+  00_CONTROL\.ig-profile\Default\AdBlock Custom Resources\000003.log
+  00_CONTROL\.ig-profile\Default\AdBlock Custom Resources\LOCK
+  00_CONTROL\.ig-profile\Default\Affiliation Database-journal
+  00_CONTROL\.ig-profile\Default\AutofillStrikeDatabase\LOCK
+  00_CONTROL\.ig-profile\Default\AutofillStrikeDatabase\LOG
+  00_CONTROL\.ig-profile\Default\AutofillStrikeDatabase\LOG.old
+  00_CONTROL\.ig-profile\Default\BraveWallet\Brave Wallet Storage\000003.log
+  00_CONTROL\.ig-profile\Default\BraveWallet\Brave Wallet Storage\LOCK
+  00_CONTROL\.ig-profile\Default\BudgetDatabase\LOCK
+  00_CONTROL\.ig-profile\Default\BudgetDatabase\LOG
+  00_CONTROL\.ig-profile\Default\BudgetDatabase\LOG.old
+  00_CONTROL\.ig-profile\Default\ClientCertificates\LOCK
+  00_CONTROL\.ig-profile\Default\ClientCertificates\LOG
+  00_CONTROL\.ig-profile\Default\ClientCertificates\LOG.old
+  00_CONTROL\.ig-profile\Default\Download Service\EntryDB\LOCK
+  00_CONTROL\.ig-profile\Default\Download Service\EntryDB\LOG
+  00_CONTROL\.ig-profile\Default\Download Service\EntryDB\LOG.old
+  00_CONTROL\.ig-profile\Default\Extension Cookies-journal
+  00_CONTROL\.ig-profile\Default\Extension Rules\LOCK
+  00_CONTROL\.ig-profile\Default\Extension Scripts\LOCK
+  00_CONTROL\.ig-profile\Default\Extension State\LOCK
+  00_CONTROL\.ig-profile\Default\Favicons-journal
+  00_CONTROL\.ig-profile\Default\Feature Engagement Tracker\AvailabilityDB\LOCK
+  ... total 95
+
+== DUPLICADOS mas pesados (top 12) ==
+      9.48 MB x2  MARC\22_LEAD_MAGNET_EBOOK\LA LOCA EN TU CABEZA\PORTADA EBOOK - GENERADOR DE BEST SELLERS 3 (1).pdf | MARC\22_LEAD_MAGNET_EBOOK\LA LOCA EN TU CABEZA\PORTADA EBOOK - GENERADOR DE BEST SELLERS 3.pdf
+      8.45 MB x2  MARC\20_PRODUCTO_DESPIERTA\05_WEBINAR\Método.pptx | MARC\28_PRESENTACION\Presentacion_Marc_Drive_2026-09-05.pptx
+      3.46 MB x2  MARC\22_LEAD_MAGNET_EBOOK\LA LOCA EN TU CABEZA\MOCK UP - GENERADOR DE BEST SELLERS 3 (1).pdf | MARC\22_LEAD_MAGNET_EBOOK\LA LOCA EN TU CABEZA\MOCK UP - GENERADOR DE BEST SELLERS 3.pdf
+      3.34 MB x2  ARCHIVO_DOCUMENTAL\06_ARCHIVO_HISTORICO\ACADEMICO_LEGACY_2026-08-28\Videos\Little Richard Tutti Frutti lyrics.mp3 | ARCHIVO_DOCUMENTAL\06_ARCHIVO_HISTORICO\ACADEMICO_LEGACY_2026-08-28\Videos\Little Ri
+      3.30 MB x2  ARCHIVO_DOCUMENTAL\06_ARCHIVO_HISTORICO\ACADEMICO_LEGACY_2026-08-28\Videos\Little Richard   Tutti Frutti[1].mp3 | ARCHIVO_DOCUMENTAL\06_ARCHIVO_HISTORICO\ACADEMICO_LEGACY_2026-08-28\Videos\Little Rich
+      2.87 MB x2  ARCHIVO_DOCUMENTAL\06_ARCHIVO_HISTORICO\ACADEMICO_LEGACY_2026-08-28\Videos\Little Richard, Tutti Frutti.mp3 | ARCHIVO_DOCUMENTAL\06_ARCHIVO_HISTORICO\ACADEMICO_LEGACY_2026-08-28\Videos\Little Richard,
+      1.13 MB x2  MARC\Chat de WhatsApp con MARC (ÚLTIMO EL MÁS RECIENTE)\Chat de WhatsApp con Marc Souza Gil\INFORME - IMPODERATE.pdf | MARC\Chat de WhatsApp con MARC\INFORME - IMPODERATE.pdf
+      0.90 MB x2  MARC\Chat de WhatsApp con MARC (ÚLTIMO EL MÁS RECIENTE)\Chat de WhatsApp con Marc Souza Gil\PTT-20260804-WA0125.opus | MARC\Chat de WhatsApp con MARC\PTT-20260804-WA0125.opus
+      0.74 MB x2  00_CONTROL\.ig-profile\Default\Cache\Cache_Data\f_0001bd | 00_CONTROL\.ig-profile\Default\Cache\Cache_Data\f_0001c6
+      0.73 MB x2  ARCHIVO_DOCUMENTAL\06_ARCHIVO_HISTORICO\ACADEMICO_LEGACY_2026-08-28\Admción.-Exposic\La sinceridad.pptx | ARCHIVO_DOCUMENTAL\06_ARCHIVO_HISTORICO\ACADEMICO_LEGACY_2026-08-28\Evaluaciones\La sinceridad
+      0.59 MB x2  00_CONTROL\.ig-profile\Default\Cache\Cache_Data\f_000164 | 00_CONTROL\.ig-profile\Default\Cache\Cache_Data\f_0001ab
+      0.55 MB x2  00_CONTROL\.ig-profile\Default\Cache\Cache_Data\f_0000b6 | 00_CONTROL\.ig-profile\Default\Cache\Cache_Data\f_000111

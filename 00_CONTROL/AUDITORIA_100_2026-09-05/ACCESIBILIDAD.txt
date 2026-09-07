@@ -1,0 +1,65 @@
+=== LANDING DESPIERTA (Marc) — MARC/WEB_DESPIERTA/index.html ===
+  variables de color detectadas: 6 -> accent, accent-deep, bg, bg2, ink, ink-dim
+  -- CONTRASTE WCAG (AA normal>=4.5, AA grande>=3.0)
+     15.64:1  AA-normal    texto normal sobre fondo  (ink vs bg)
+      7.08:1  AA-normal    texto secundario sobre fondo  (ink-dim vs bg)
+      9.10:1  AA-normal    acento sobre fondo  (accent vs bg)
+      6.75:1  AA-normal    texto secundario en tarjeta  (ink-dim vs bg2)
+      8.67:1  AA-normal    acento en tarjeta  (accent vs bg2)
+  -- ESTRUCTURA
+     OK   idioma declarado (lang)
+     OK   un solo <h1>
+     OK   viewport responsive
+     OK   respeta reduced-motion
+     OK   imagenes con alt
+     OK   enlaces externos con rel=noopener
+     OK   titulo <title> presente
+     OK   descripcion meta presente
+     OK   datos estructurados
+     OK   tema de color declarado
+     imagenes: 1  h2: 10  details/FAQ: 4
+     fuente base: 17px  (OK)
+
+=== LANDING SOBERANIA VITAL (Aurora) — AURORA/WEB_SOBERANIA_VITAL/index.html ===
+  variables de color detectadas: 6 -> accent, accent-deep, bg, bg2, ink, ink-dim
+  -- CONTRASTE WCAG (AA normal>=4.5, AA grande>=3.0)
+     12.75:1  AA-normal    texto normal sobre fondo  (ink vs bg)
+      5.20:1  AA-normal    texto secundario sobre fondo  (ink-dim vs bg)
+      5.72:1  AA-normal    acento sobre fondo  (accent vs bg)
+      5.67:1  AA-normal    texto secundario en tarjeta  (ink-dim vs bg2)
+      6.23:1  AA-normal    acento en tarjeta  (accent vs bg2)
+  -- ESTRUCTURA
+     OK   idioma declarado (lang)
+     OK   un solo <h1>
+     OK   viewport responsive
+     OK   respeta reduced-motion
+     OK   imagenes con alt
+     OK   enlaces externos con rel=noopener
+     OK   titulo <title> presente
+     OK   descripcion meta presente
+     OK   datos estructurados
+     OK   tema de color declarado
+     imagenes: 0  h2: 6  details/FAQ: 4
+     fuente base: 17px  (OK)
+
+=== APP DESPIERTA — MARC/APP_DESPIERTA/index.html ===
+  variables de color detectadas: 7 -> accent, accent-deep, bg, bg2, bg3, dim, ink
+  -- CONTRASTE WCAG (AA normal>=4.5, AA grande>=3.0)
+     15.64:1  AA-normal    ink sobre bg  (ink vs bg)
+     14.62:1  AA-normal    ink sobre bg2  (ink vs bg2)
+      9.10:1  AA-normal    accent sobre bg  (accent vs bg)
+      8.51:1  AA-normal    accent sobre bg2  (accent vs bg2)
+  -- ESTRUCTURA
+     OK   idioma declarado (lang)
+     REV  un solo <h1>
+     OK   viewport responsive
+     OK   respeta reduced-motion
+     OK   imagenes con alt
+     OK   enlaces externos con rel=noopener
+     OK   titulo <title> presente
+     OK   descripcion meta presente
+     REV  datos estructurados
+     OK   tema de color declarado
+     imagenes: 0  h2: 1  details/FAQ: 0
+
+FIN

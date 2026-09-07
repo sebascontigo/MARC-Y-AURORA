@@ -1,0 +1,20 @@
+{
+  "servers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "c:\\Imagenes\\01_LEGAL_Y_PROYECTOS\\01_ACTIVOS_MAESTROS\\06_CLIENTES\\MARC"
+      ]
+    },
+    "sqlite-marc": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-sqlite-npx",
+        "c:\\Imagenes\\01_LEGAL_Y_PROYECTOS\\01_ACTIVOS_MAESTROS\\06_CLIENTES\\MARC\\.mcp-sqlite\\marc-data.db"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1213 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Despierta — Tu proceso</title>
+    <meta
+      name="description"
+      content="App de tu proceso Despierta: las 4 fases, check-in diario y hábitos."
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#0e0e11" />
+    <link rel="icon" href="assets/icon-192.png" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <style>
+      :root {
+        --bg: #0e0e11;
+        --bg2: #16161c;
+        --bg3: #1e1e26;
+        --ink: #ece7dd;
+        --dim: #a49c8d;
+        --accent: #e8a54b;
+        --accent-deep: #b97a2c;
+        --line: rgba(236, 231, 221, 0.12);
+        --serif: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        --sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        --tabbar: 64px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
+        padding-bottom: calc(var(--tabbar) + env(safe-area-inset-bottom));
+      }
+      .view {
+        display: none;
+        padding: 22px 20px 30px;
+        max-width: 560px;
+        margin: 0 auto;
+      }
+      .view.active {
+        display: block;
+      }
+      h1 {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: 1.9rem;
+        line-height: 1.2;
+      }
+      h2 {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: 1.35rem;
+        margin-bottom: 14px;
+      }
+      .kicker {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      .muted {
+        color: var(--dim);
+      }
+      .card {
+        background: var(--bg2);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px;
+        margin-top: 14px;
+      }
+      .bar {
+        height: 8px;
+        background: var(--bg3);
+        border-radius: 99px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+      .bar i {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent-deep), var(--accent));
+        border-radius: 99px;
+        transition: width 0.4s ease;
+      }
+      button.primary {
+        background: var(--accent);
+        color: #161006;
+        border: none;
+        border-radius: 8px;
+        padding: 13px 22px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        width: 100%;
+      }
+      input[type="text"],
+      input[type="date"],
+      textarea,
+      select {
+        width: 100%;
+        background: var(--bg3);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--ink);
+        padding: 12px;
+        font-family: inherit;
+        font-size: 1rem;
+      }
+      textarea {
+        min-height: 84px;
+        resize: vertical;
+      }
+      label {
+        display: block;
+        font-size: 0.85rem;
+        color: var(--dim);
+        margin: 14px 0 6px;
+      }
+
+      /* ONBOARDING */
+      #onboard {
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 80% 40% at 50% -5%,
+            rgba(232, 165, 75, 0.15),
+            transparent 60%
+          ),
+          var(--bg);
+        z-index: 50;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        padding: 32px;
+      }
+      #onboard.show {
+        display: flex;
+      }
+      #onboard h1 {
+        margin-bottom: 8px;
+      }
+      #onboard p.muted {
+        margin-bottom: 24px;
+      }
+
+      /* TABS */
+      nav.tabs {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: calc(var(--tabbar) + env(safe-area-inset-bottom));
+        background: rgba(14, 14, 17, 0.96);
+        backdrop-filter: blur(8px);
+        border-top: 1px solid var(--line);
+        display: flex;
+        z-index: 40;
+      }
+      nav.tabs button {
+        flex: 1;
+        background: none;
+        border: none;
+        color: var(--dim);
+        font-family: inherit;
+        font-size: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        padding-top: 10px;
+        cursor: pointer;
+      }
+      nav.tabs button svg {
+        width: 22px;
+        height: 22px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      nav.tabs button.on {
+        color: var(--accent);
+      }
+
+      /* FASES */
+      .phase {
+        display: flex;
+        gap: 16px;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--line);
+        align-items: flex-start;
+      }
+      .phase:last-child {
+        border: none;
+      }
+      .phase .num {
+        font-family: var(--serif);
+        font-size: 1.9rem;
+        color: var(--accent);
+        opacity: 0.8;
+        min-width: 1.2em;
+        line-height: 1.1;
+      }
+      .phase h3 {
+        font-size: 1.05rem;
+        letter-spacing: 0.05em;
+      }
+      .phase p {
+        color: var(--dim);
+        font-size: 0.92rem;
+        margin-top: 4px;
+      }
+      .phase.now .num::after {
+        content: " · AHORA";
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        color: var(--ink);
+        vertical-align: middle;
+      }
+      .phase button.setnow {
+        background: none;
+        border: 1px solid var(--line);
+        color: var(--dim);
+        border-radius: 6px;
+        padding: 5px 10px;
+        font-size: 0.75rem;
+        margin-top: 8px;
+        cursor: pointer;
+      }
+      .phase.now button.setnow {
+        border-color: var(--accent-deep);
+        color: var(--accent);
+      }
+
+      /* CHECKIN */
+      .scale {
+        display: flex;
+        gap: 8px;
+        margin-top: 6px;
+      }
+      .scale button {
+        flex: 1;
+        background: var(--bg3);
+        border: 1px solid var(--line);
+        color: var(--dim);
+        border-radius: 8px;
+        padding: 12px 0;
+        font-size: 1.05rem;
+        cursor: pointer;
+      }
+      .scale button.sel {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #161006;
+        font-weight: 700;
+      }
+      .entry {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 0.92rem;
+      }
+      .entry:last-child {
+        border: none;
+      }
+      .entry .when {
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+      }
+      .entry .en {
+        color: var(--dim);
+      }
+
+      /* HABITOS */
+      .habit {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .habit:last-of-type {
+        border: none;
+      }
+      .habit .chk {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 2px solid var(--accent-deep);
+        background: none;
+        cursor: pointer;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: transparent;
+        font-size: 0.9rem;
+        font-weight: 800;
+      }
+      .habit.done .chk {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #161006;
+      }
+      .habit span {
+        flex: 1;
+      }
+      .habit small.streak {
+        color: var(--accent);
+        font-size: 0.75rem;
+        white-space: nowrap;
+      }
+      .habit button.del {
+        background: none;
+        border: none;
+        color: var(--dim);
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 4px;
+      }
+
+      /* MODULOS (temario real) */
+      .mod {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .mod:last-of-type {
+        border: none;
+      }
+      .mod .mn {
+        font-family: var(--serif);
+        color: var(--accent);
+        min-width: 2em;
+        font-size: 0.95rem;
+        padding-top: 3px;
+      }
+      .mod .mt {
+        flex: 1;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+      .mod .chk {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 2px solid var(--accent-deep);
+        background: none;
+        cursor: pointer;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: transparent;
+        font-size: 0.9rem;
+        font-weight: 800;
+        margin-top: 1px;
+      }
+      .mod.done .chk {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #161006;
+      }
+      .mod.done .mt {
+        color: var(--dim);
+        text-decoration: line-through;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .row input {
+        flex: 1;
+      }
+      .row button {
+        background: var(--bg3);
+        border: 1px solid var(--line);
+        color: var(--accent);
+        border-radius: 8px;
+        padding: 0 18px;
+        font-size: 1.3rem;
+        cursor: pointer;
+      }
+
+      header.top {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 18px 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header.top .logo {
+        font-family: var(--serif);
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        font-size: 1.05rem;
+      }
+      header.top button {
+        background: none;
+        border: 1px solid var(--line);
+        color: var(--dim);
+        border-radius: 6px;
+        padding: 6px 10px;
+        font-size: 0.72rem;
+        cursor: pointer;
+      }
+      /* CALMA / SOS */
+      .sos-btn {
+        width: 100%;
+        padding: 22px;
+        border: none;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #b3341f, #e8a54b);
+        color: #fff;
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        box-shadow: 0 8px 30px rgba(232, 165, 75, 0.25);
+      }
+      .sos-btn:active {
+        transform: scale(0.98);
+      }
+      .breath-stage {
+        display: grid;
+        place-items: center;
+        padding: 26px 0 10px;
+      }
+      .breath-circle {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(232, 165, 75, 0.35),
+          rgba(232, 165, 75, 0.08)
+        );
+        border: 2px solid var(--accent);
+        display: grid;
+        place-items: center;
+        font-family: var(--serif);
+        font-size: 1.25rem;
+        color: var(--accent);
+        transition: transform 4s ease;
+        text-align: center;
+        line-height: 1.25;
+        padding: 12px;
+      }
+      .breath-circle.inhale {
+        transform: scale(1.28);
+      }
+      .breath-circle.hold {
+        transform: scale(1.28);
+      }
+      .breath-circle.exhale {
+        transform: scale(0.82);
+      }
+      .calma-status {
+        font-size: 0.85rem;
+        color: var(--dim);
+        text-align: center;
+        min-height: 1.4em;
+      }
+      audio {
+        width: 100%;
+        margin-top: 12px;
+      }
+      .watch-hint {
+        font-size: 0.8rem;
+        color: var(--dim);
+      }
+      /* Accesibilidad: si el sistema pide menos movimiento, se quitan animaciones.
+     El circulo de respiracion sigue guiando por TEXTO (inhala/manten/suelta). */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+        .breath-circle,
+        .breath-circle.inhale,
+        .breath-circle.hold,
+        .breath-circle.exhale {
+          transform: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="onboard">
+      <p class="kicker">DESPIERTA</p>
+      <h1>Tu proceso,<br />en tus manos.</h1>
+      <p class="muted">
+        Las 4 fases, tu check-in diario y tus hábitos. Todo se guarda solo en tu
+        dispositivo.
+      </p>
+      <label>¿Cómo te llamas?</label>
+      <input type="text" id="ob-name" placeholder="Tu nombre" maxlength="30" />
+      <label>¿Cuándo empezaste Despierta?</label>
+      <input type="date" id="ob-date" />
+      <div style="height: 22px"></div>
+      <button class="primary" onclick="finishOnboard()">Empezar</button>
+    </div>
+
+    <header class="top">
+      <span class="logo">D E S P I E R T A</span>
+      <span>
+        <button onclick="exportData()">Exportar</button>
+        <button onclick="resetOnboard()">Ajustes</button>
+      </span>
+    </header>
+
+    <main>
+      <section id="v-home" class="view active">
+        <p class="kicker" id="home-greet">Hola</p>
+        <h1 id="home-title">Este es tu proceso.</h1>
+        <div class="card" style="border-left: 3px solid var(--accent)">
+          <p
+            class="muted"
+            style="
+              font-size: 0.78rem;
+              letter-spacing: 0.12em;
+              text-transform: uppercase;
+            "
+          >
+            Para hoy
+          </p>
+          <p
+            id="home-quote"
+            style="
+              font-family: var(--serif);
+              font-size: 1.15rem;
+              line-height: 1.4;
+              margin-top: 8px;
+            "
+          >
+            —
+          </p>
+        </div>
+        <div class="card">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: baseline;
+            "
+          >
+            <span class="muted">Progreso del programa</span>
+            <strong id="home-pct" style="color: var(--accent)">0%</strong>
+          </div>
+          <div class="bar"><i id="home-bar" style="width: 0%"></i></div>
+          <p
+            class="muted"
+            id="home-meta"
+            style="margin-top: 12px; font-size: 0.88rem"
+          >
+            —
+          </p>
+        </div>
+        <div class="card">
+          <p class="muted" style="font-size: 0.85rem">Módulos del programa</p>
+          <p
+            id="home-modules"
+            style="margin-top: 4px; font-size: 0.95rem; color: var(--accent)"
+          >
+            0 / 13 completados
+          </p>
+          <button
+            class="primary"
+            style="
+              margin-top: 10px;
+              background: var(--bg3);
+              color: var(--accent);
+              border: 1px solid var(--line);
+            "
+            onclick="go('programa')"
+          >
+            Ver mi temario
+          </button>
+        </div>
+        <div class="card">
+          <p class="muted" style="font-size: 0.85rem">Fase actual</p>
+          <h2 id="home-phase" style="margin-bottom: 4px">VER</h2>
+          <p id="home-phase-desc" class="muted" style="font-size: 0.92rem"></p>
+        </div>
+        <div class="card">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: baseline;
+            "
+          >
+            <p class="muted" style="font-size: 0.85rem">Check-in de hoy</p>
+            <small id="home-streak" class="muted"></small>
+          </div>
+          <p
+            id="home-checkin-state"
+            style="margin-top: 6px; font-size: 0.95rem"
+          >
+            Pendiente
+          </p>
+          <button
+            class="primary"
+            style="margin-top: 14px"
+            onclick="go('diario')"
+          >
+            Hacer check-in
+          </button>
+        </div>
+      </section>
+
+      <section id="v-fases" class="view">
+        <p class="kicker">El método</p>
+        <h1>Cuatro fases.<br />Un camino.</h1>
+        <div class="card" style="padding: 8px 18px" id="fases-list"></div>
+        <p class="muted" style="font-size: 0.8rem; margin-top: 14px">
+          No es motivación — la motivación se acaba el martes. Es método,
+          acompañado durante meses.
+        </p>
+      </section>
+
+      <section id="v-diario" class="view">
+        <p class="kicker">Check-in diario</p>
+        <h1>¿Cómo está hoy tu mente?</h1>
+        <div class="card">
+          <label>Energía de hoy (1 – 5)</label>
+          <div class="scale" id="scale-energy">
+            <button data-v="1">1</button><button data-v="2">2</button
+            ><button data-v="3">3</button><button data-v="4">4</button
+            ><button data-v="5">5</button>
+          </div>
+          <label>Una nota para ti (opcional)</label>
+          <textarea
+            id="ci-note"
+            placeholder="¿Qué has notado hoy? ¿Qué programa te ha movido?"
+          ></textarea>
+          <div style="height: 16px"></div>
+          <button class="primary" onclick="saveCheckin()">
+            Guardar check-in
+          </button>
+        </div>
+        <div class="card">
+          <p class="kicker" style="margin-bottom: 10px">Historial</p>
+          <div id="ci-history">
+            <p class="muted" style="font-size: 0.9rem">Aún no hay registros.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="v-habitos" class="view">
+        <p class="kicker">Hábitos</p>
+        <h1>Lo que repites<br />es lo que eres.</h1>
+        <div class="card" id="habitos-list"></div>
+        <div class="row">
+          <input
+            type="text"
+            id="hab-nuevo"
+            placeholder="Nuevo hábito (ej. caminar 20 min)"
+            maxlength="60"
+          />
+          <button onclick="addHabit()">+</button>
+        </div>
+      </section>
+
+      <section id="v-programa" class="view">
+        <p class="kicker">El programa</p>
+        <h1>Trece módulos.<br />Tu mapa completo.</h1>
+        <p class="muted" style="font-size: 0.9rem; margin-top: 2px">
+          Marca los módulos que vas completando en vivo con Marc. Cada uno trae
+          herramientas, audios y retos de aplicación.
+        </p>
+        <div class="card" id="modulos-list"></div>
+      </section>
+
+      <section id="v-calma" class="view">
+        <p class="kicker">Calma inmediata</p>
+        <h1>Estás a salvo.<br />Vamos juntos.</h1>
+        <p class="muted" style="font-size: 0.9rem">
+          El estrés y la ansiedad son programas, no verdades. Pulsa el botón,
+          respira conmigo y vuelve al presente.
+        </p>
+        <div class="card">
+          <button class="sos-btn" id="sos-btn" onclick="sosStart()">
+            🆘 NECESITO CALMA AHORA
+          </button>
+          <div class="breath-stage">
+            <div class="breath-circle" id="breath-circle">Pulsa el botón</div>
+          </div>
+          <p class="calma-status" id="calma-status">—</p>
+          <audio
+            id="calma-audio"
+            src="audios/calma_marc.mp3"
+            preload="none"
+          ></audio>
+          <p class="watch-hint">
+            Si no hay audio, usa la respiración guiada: funciona igual.
+          </p>
+        </div>
+        <div class="card">
+          <p class="kicker" style="margin-bottom: 8px">Anclaje 5-4-3-2-1</p>
+          <p class="muted" style="font-size: 0.92rem; line-height: 1.7">
+            Nombra en voz baja:<br />
+            <strong style="color: var(--accent)">5</strong> cosas que ves ·
+            <strong style="color: var(--accent)">4</strong> que puedes tocar ·
+            <strong style="color: var(--accent)">3</strong> que oyes ·
+            <strong style="color: var(--accent)">2</strong> que hueles ·
+            <strong style="color: var(--accent)">1</strong> que saboreas.
+          </p>
+          <p class="muted" style="font-size: 0.85rem; margin-top: 8px">
+            Esto devuelve al cuerpo al aquí-ahora mientras el programa pierde
+            fuerza.
+          </p>
+        </div>
+        <div class="card">
+          <p class="kicker" style="margin-bottom: 8px">⌚ En tu reloj</p>
+          <p class="muted" style="font-size: 0.9rem">
+            Lleva CALMA en la muñeca: botón SOS redondo para Wear OS con la voz
+            de Marc y respiración guiada.
+          </p>
+          <button
+            class="primary"
+            style="
+              margin-top: 12px;
+              background: var(--bg3);
+              color: var(--accent);
+              border: 1px solid var(--line);
+            "
+            onclick="window.open('watch/index.html', '_blank')"
+          >
+            Abrir versión reloj
+          </button>
+          <p class="watch-hint" style="margin-top: 8px">
+            En el reloj (Wear OS): abre despierta-app.netlify.app/watch con
+            Samsung Internet → añadir a favoritos. Próximamente: app nativa +
+            manilla con detección de estrés.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      style="
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 6px 20px 20px;
+        text-align: center;
+      "
+    >
+      <p class="muted" style="font-size: 0.75rem">
+        DESPIERTA · v3 sept 2026 ·
+        <a
+          href="https://despierta-marc.netlify.app"
+          rel="noopener"
+          style="color: var(--accent)"
+          >despierta-marc.netlify.app</a
+        >
+      </p>
+    </footer>
+
+    <nav class="tabs">
+      <button data-go="home" class="on">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 11l9-8 9 8" />
+          <path d="M5 10v10h5v-6h4v6h5V10" /></svg
+        >Inicio
+      </button>
+      <button data-go="fases">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <circle cx="12" cy="12" r="4.5" /></svg
+        >Fases
+      </button>
+      <button data-go="programa">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 5h16M4 12h16M4 19h16" />
+          <circle cx="8" cy="5" r="1.6" />
+          <circle cx="16" cy="12" r="1.6" />
+          <circle cx="8" cy="19" r="1.6" /></svg
+        >Programa
+      </button>
+      <button data-go="diario">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M4 19V6a2 2 0 012-2h13v15H6a2 2 0 01-2 2zm0 0a2 2 0 002 2h13"
+          />
+          <path d="M9 8h6M9 12h4" /></svg
+        >Diario
+      </button>
+      <button data-go="habitos">
+        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" /></svg>Hábitos
+      </button>
+      <button data-go="calma" style="color: var(--accent)">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7v5l3 3" /></svg
+        >Calma
+      </button>
+    </nav>
+
+    <script>
+      const PHASES = [
+        {
+          t: "VER",
+          d: "Identificamos los programas que dirigen tu vida sin que lo sepas: creencias, miedos, piloto automático. No puedes cambiar lo que no ves.",
+        },
+        {
+          t: "DESMONTAR",
+          d: "Trabajamos esos programas uno a uno. Psicoterapia para lo emocional, coaching para lo práctico, metafísica para lo profundo.",
+        },
+        {
+          t: "REPROGRAMAR",
+          d: "Instalamos nuevas formas de pensar, decidir y actuar. Aquí tu vida empieza a responder diferente.",
+        },
+        {
+          t: "DOMINAR",
+          d: "Integras todo hasta que se vuelve tu normalidad. Ya no dependes de la motivación: diriges tu mente.",
+        },
+      ];
+      const KEY = "despierta.v1";
+      const MODULES = [
+        { t: "Energía — la realidad invisible" },
+        { t: "La mente — el iceberg del subconsciente" },
+        { t: "Las creencias I — tu programación" },
+        { t: "El ego I — roles y mecanismos" },
+        { t: "El ego II — el radar de las sombras" },
+        { t: "El ego III — el bloqueo inmediato" },
+        { t: "Las creencias II — reprogramación mental" },
+        { t: "Las creencias III — desconectando de la Matrix" },
+        { t: "La salud — soberanía biológica y epigenética" },
+        { t: "Metafísica I — las reglas del juego" },
+        { t: "Metafísica II — ingeniería de la manifestación" },
+        { t: "Metafísica III — maestría de la abundancia" },
+        { t: "BONO · El propósito de vida — el retorno al ser" },
+      ];
+      const QUOTES = [
+        "No eres la charla que oyes en tu cabeza.",
+        "Llevas años intentando cambiar tu vida con la misma mente que la creó.",
+        "El piloto automático no es descanso. Es una cárcel invisible.",
+        "No necesitas más motivación. Necesitas reprogramar tu mente.",
+        "Lo que llamas 'ser realista' es miedo disfrazado de lógica.",
+        "Tu vida no cambia cuando cambian las circunstancias. Cambia cuando cambias tú.",
+        "No estás cansado de tu vida. Estás cansado de repetirla.",
+        "La motivación se acaba el martes. La transformación se queda.",
+        "No puedes cambiar lo que no ves.",
+        "¿Te atreves a crear tu sueño?",
+      ];
+      let S = load();
+      function load() {
+        try {
+          return JSON.parse(localStorage.getItem(KEY)) || null;
+        } catch (e) {
+          return null;
+        }
+      }
+      function save() {
+        localStorage.setItem(KEY, JSON.stringify(S));
+      }
+      function today() {
+        return new Date().toISOString().slice(0, 10);
+      }
+      function dstr(iso) {
+        return new Date(iso + "T12:00:00").toLocaleDateString("es-ES", {
+          weekday: "short",
+          day: "numeric",
+          month: "short",
+        });
+      }
+
+      function boot() {
+        if (!S) {
+          showOnboard();
+          return;
+        }
+        if (!S.habits) S.habits = [];
+        if (!S.modules) S.modules = {};
+        renderAll();
+      }
+      function showOnboard() {
+        document.getElementById("onboard").classList.add("show");
+        document.getElementById("ob-date").value = today();
+      }
+      function finishOnboard() {
+        const n = document.getElementById("ob-name").value.trim() || "";
+        const f = document.getElementById("ob-date").value || today();
+        if (!S) S = {};
+        S.name = n;
+        S.start = f;
+        S.phase = S.phase ?? 0;
+        S.checkins = S.checkins || {};
+        S.habits = S.habits || [];
+        save();
+        document.getElementById("onboard").classList.remove("show");
+        renderAll();
+      }
+      function resetOnboard() {
+        showOnboard();
+        document.getElementById("ob-name").value = S?.name || "";
+      }
+
+      /* ---- render ---- */
+      function renderAll() {
+        renderHome();
+        renderFases();
+        renderDiario();
+        renderHabitos();
+        renderModulos();
+      }
+      /* ---- módulos del programa ---- */
+      function renderModulos() {
+        const el = document.getElementById("modulos-list");
+        const done = S.modules || {};
+        el.innerHTML = MODULES.map(
+          (m, i) => `
+   <div class="mod ${done[i] ? "done" : ""}">
+     <span class="mn">${String(i + 1).padStart(2, "0")}</span>
+     <span class="mt">${m.t}</span>
+     <button class="chk" onclick="toggleModule(${i})">✓</button>
+   </div>`,
+        ).join("");
+      }
+      function toggleModule(i) {
+        S.modules = S.modules || {};
+        if (S.modules[i]) delete S.modules[i];
+        else S.modules[i] = true;
+        save();
+        renderModulos();
+      }
+      function progDays() {
+        if (!S?.start) return { days: 0, pct: 0, week: 1 };
+        const ms = Date.now() - new Date(S.start + "T12:00:00");
+        const days = Math.max(0, Math.floor(ms / 864e5));
+        return {
+          days,
+          pct: Math.min(100, Math.round((days / 120) * 100)),
+          week: Math.min(16, Math.floor(days / 7) + 1),
+        };
+      }
+      function renderHome() {
+        document.getElementById("home-greet").textContent = S?.name
+          ? "Hola, " + S.name
+          : "Hola";
+        // frase del día (rota según el día del año)
+        const doy = Math.floor(
+          (Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 864e5,
+        );
+        document.getElementById("home-quote").textContent =
+          "“" + QUOTES[doy % QUOTES.length] + "”";
+        const p = progDays();
+        document.getElementById("home-pct").textContent = p.pct + "%";
+        document.getElementById("home-bar").style.width = p.pct + "%";
+        document.getElementById("home-meta").textContent =
+          `Día ${p.days + 1} · Semana ${p.week} de 16`;
+        const mods = S.modules || {};
+        const modCount = Object.keys(mods).filter((k) => mods[k]).length;
+        document.getElementById("home-modules").textContent =
+          `${modCount} / 13 completados`;
+        const ph = PHASES[S.phase || 0];
+        document.getElementById("home-phase").textContent =
+          "Fase " + ((S.phase || 0) + 1) + " · " + ph.t;
+        document.getElementById("home-phase-desc").textContent = ph.d;
+        const c = S.checkins?.[today()];
+        const st = checkinStreak();
+        document.getElementById("home-streak").textContent =
+          st > 1 ? `🔥 ${st} días seguidos` : "";
+        document.getElementById("home-checkin-state").innerHTML = c
+          ? `<span style="color:var(--accent)">✓ Hecho</span> — energía ${c.energy}/5`
+          : `Pendiente`;
+      }
+      function checkinStreak() {
+        let n = 0,
+          d = new Date();
+        // si hoy aún no hay check-in, la racha cuenta desde ayer
+        if (!(S.checkins || {})[today()]) d.setDate(d.getDate() - 1);
+        while (true) {
+          const k = d.toISOString().slice(0, 10);
+          if ((S.checkins || {})[k]) n++;
+          else break;
+          d.setDate(d.getDate() - 1);
+        }
+        return n;
+      }
+      function exportData() {
+        const blob = new Blob([JSON.stringify(S, null, 2)], {
+          type: "application/json",
+        });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "despierta-mi-proceso.json";
+        a.click();
+        URL.revokeObjectURL(a.href);
+      }
+      function renderFases() {
+        const el = document.getElementById("fases-list");
+        el.innerHTML = PHASES.map(
+          (p, i) => `
+   <div class="phase ${i === S.phase ? "now" : ""}">
+     <div class="num">${i + 1}</div>
+     <div style="flex:1">
+       <h3>${p.t}</h3><p>${p.d}</p>
+       <button class="setnow" onclick="setPhase(${i})">${i === S.phase ? "Fase actual" : "Marcar como fase actual"}</button>
+     </div>
+   </div>`,
+        ).join("");
+      }
+      function setPhase(i) {
+        S.phase = i;
+        save();
+        renderAll();
+      }
+
+      /* ---- check-in ---- */
+      let selEnergy = null;
+      document.querySelectorAll("#scale-energy button").forEach((b) => {
+        b.onclick = () => {
+          selEnergy = +b.dataset.v;
+          document
+            .querySelectorAll("#scale-energy button")
+            .forEach((x) => x.classList.toggle("sel", x === b));
+        };
+      });
+      function saveCheckin() {
+        if (!selEnergy) {
+          alert("Elige tu energía de hoy (1–5).");
+          return;
+        }
+        S.checkins = S.checkins || {};
+        S.checkins[today()] = {
+          energy: selEnergy,
+          note: document.getElementById("ci-note").value.trim(),
+        };
+        save();
+        renderDiario();
+        renderHome();
+      }
+      function renderDiario() {
+        const hist = document.getElementById("ci-history");
+        const keys = Object.keys(S.checkins || {})
+          .sort()
+          .reverse()
+          .slice(0, 30);
+        hist.innerHTML = keys.length
+          ? keys
+              .map((k) => {
+                const c = S.checkins[k];
+                return `<div class="entry"><span class="when">${dstr(k).toUpperCase()}</span> · <span class="en">energía ${c.energy}/5</span>${c.note ? `<p class="muted" style="margin-top:4px">${esc(c.note)}</p>` : ""}</div>`;
+              })
+              .join("")
+          : `<p class="muted" style="font-size:.9rem">Aún no hay registros.</p>`;
+      }
+      /* ---- hábitos ---- */
+      function esc(s) {
+        return s.replace(
+          /[&<>"]/g,
+          (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+        );
+      }
+      function addHabit() {
+        const v = document.getElementById("hab-nuevo").value.trim();
+        if (!v) return;
+        S.habits.push({ id: Date.now(), title: v, log: {} });
+        document.getElementById("hab-nuevo").value = "";
+        save();
+        renderHabitos();
+      }
+      function toggleHabit(id) {
+        const h = S.habits.find((x) => x.id === id);
+        if (!h) return;
+        if (h.log[today()]) delete h.log[today()];
+        else h.log[today()] = true;
+        save();
+        renderHabitos();
+      }
+      function delHabit(id) {
+        S.habits = S.habits.filter((x) => x.id !== id);
+        save();
+        renderHabitos();
+      }
+      function streak(h) {
+        let n = 0,
+          d = new Date();
+        while (true) {
+          const k = d.toISOString().slice(0, 10);
+          if (h.log[k]) n++;
+          else break;
+          d.setDate(d.getDate() - 1);
+        }
+        return n;
+      }
+      function renderHabitos() {
+        const el = document.getElementById("habitos-list");
+        if (!S.habits.length) {
+          el.innerHTML = `<p class="muted" style="font-size:.9rem">Sin hábitos todavía. Añade el primero abajo 👇</p>`;
+          return;
+        }
+        el.innerHTML = S.habits
+          .map((h) => {
+            const done = !!h.log[today()];
+            const st = streak(h);
+            return `<div class="habit ${done ? "done" : ""}">
+      <button class="chk" onclick="toggleHabit(${h.id})">✓</button>
+      <span>${esc(h.title)}</span>
+      ${st > 1 ? `<small class="streak">🔥${st}</small>` : `<small class="streak"></small>`}
+      <button class="del" onclick="delHabit(${h.id})" aria-label="Eliminar">✕</button>
+    </div>`;
+          })
+          .join("");
+      }
+
+      /* ---- calma / SOS ---- */
+      let breathTimer = null,
+        breathRunning = false;
+      const BREATH_SEQ = [
+        { label: "INSPIRA", cls: "inhale", ms: 4000 },
+        { label: "SOSTÉN", cls: "hold", ms: 4000 },
+        { label: "EXHALA", cls: "exhale", ms: 6000 },
+      ];
+      function breathStep(i, loopsLeft) {
+        const c = document.getElementById("breath-circle"),
+          st = document.getElementById("calma-status");
+        if (!breathRunning) return;
+        if (i >= BREATH_SEQ.length) {
+          i = 0;
+          loopsLeft--;
+        }
+        if (loopsLeft <= 0) {
+          breathStop(true);
+          return;
+        }
+        const s = BREATH_SEQ[i];
+        c.className = "breath-circle " + s.cls;
+        c.textContent = s.label;
+        st.textContent =
+          "Sigue el círculo · quedan " +
+          loopsLeft +
+          " ciclo" +
+          (loopsLeft > 1 ? "s" : "");
+        if (navigator.vibrate)
+          navigator.vibrate(s.label === "EXHALA" ? [80] : [40]);
+        breathTimer = setTimeout(() => breathStep(i + 1, loopsLeft), s.ms);
+      }
+      function breathStop(finished) {
+        breathRunning = false;
+        clearTimeout(breathTimer);
+        const c = document.getElementById("breath-circle"),
+          st = document.getElementById("calma-status");
+        if (c) {
+          c.className = "breath-circle";
+          c.textContent = "Pulsa el botón";
+        }
+        if (st)
+          st.textContent = finished
+            ? "✓ Bien hecho. Volviste al presente. — MARC"
+            : "—";
+        const b = document.getElementById("sos-btn");
+        if (b) b.textContent = "🆘 NECESITO CALMA AHORA";
+      }
+      function sosStart() {
+        if (breathRunning) {
+          breathStop(false);
+          return;
+        }
+        breathRunning = true;
+        document.getElementById("sos-btn").textContent = "■ PARAR";
+        const a = document.getElementById("calma-audio");
+        if (a) {
+          a.currentTime = 0;
+          a.play().catch(() => {});
+        }
+        breathStep(0, 4);
+      }
+      /* ---- navegación ---- */
+      function go(v) {
+        document
+          .querySelectorAll(".view")
+          .forEach((x) => x.classList.remove("active"));
+        document.getElementById("v-" + v).classList.add("active");
+        document
+          .querySelectorAll(".tabs button")
+          .forEach((b) => b.classList.toggle("on", b.dataset.go === v));
+        window.scrollTo(0, 0);
+      }
+      document
+        .querySelectorAll(".tabs button")
+        .forEach((b) => (b.onclick = () => go(b.dataset.go)));
+
+      /* ---- PWA ---- */
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      }
+      boot();
+    </script>
+  </body>
+</html>

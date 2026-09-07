@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Método DESPIERTA — Presentación Webinar v3 (Marc Souza)</title>
+<style>
+  :root { --negro:#0b0b0e; --ambar:#e8a33d; --crema:#f5efe4; --gris:#9a9aa0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { height:100%; background:#000; font-family:Georgia,'Times New Roman',serif; color:var(--crema); overflow:hidden; }
+  .slide { display:none; height:100vh; width:100vw; background:var(--negro);
+    flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    padding:6vh 9vw; position:relative; }
+  .slide.active { display:flex; }
+  .slide.bg::before { content:""; position:absolute; inset:0; background-size:cover; background-position:center;
+    opacity:.25; filter:saturate(.9); }
+  .slide.bg::after { content:""; position:absolute; inset:0;
+    background:radial-gradient(ellipse at center, rgba(11,11,14,.55) 0%, rgba(11,11,14,.88) 100%); }
+  .slide.bg > * { position:relative; z-index:1; }
+  .slide.split { flex-direction:row; gap:4vw; text-align:left; }
+  .split .txt { flex:1.2; } .split .pic { flex:1; display:flex; align-items:center; justify-content:center; }
+  .split .pic img { max-width:100%; max-height:80vh; border-radius:1vh; object-fit:contain;
+    box-shadow:0 0 6vh rgba(232,163,61,.25); }
+  .kicker { color:var(--ambar); letter-spacing:.35em; font-size:2.1vh; text-transform:uppercase; margin-bottom:2.5vh; }
+  h1 { font-size:5.4vh; line-height:1.3; font-weight:normal; max-width:78vw; text-shadow:0 .3vh 2vh rgba(0,0,0,.85); }
+  h1 em { color:var(--ambar); font-style:normal; }
+  h1.giant { font-size:8.5vh; letter-spacing:.05em; }
+  p.sub { margin-top:2.8vh; font-size:2.8vh; color:#d8d2c4; line-height:1.55; max-width:64vw; text-shadow:0 .2vh 1.2vh rgba(0,0,0,.85); }
+  .split p.sub { max-width:none; }
+  .fullimg { padding:2vh 2vw; }
+  .fullimg img { max-width:94vw; max-height:92vh; border-radius:.6vh; object-fit:contain; }
+  .logo { height:13vh; margin-bottom:3vh; }
+  .sello { height:6vh; margin-top:3vh; opacity:.9; }
+  #bar { position:fixed; bottom:0; left:0; height:.7vh; background:var(--ambar); width:0; z-index:10; }
+  #cnt { position:fixed; bottom:2vh; right:2.5vw; color:var(--gris); font-size:2vh; z-index:10; }
+  #hint { position:fixed; bottom:2vh; left:2.5vw; color:#4a4a50; font-size:1.8vh; z-index:10; }
+  aside.notes { display:none; position:fixed; bottom:6vh; left:6vw; right:6vw; background:#1a1a1e;
+    border-left:.5vh solid var(--ambar); padding:2vh 2vw; font-size:2.2vh; line-height:1.5; color:#d8d2c4; z-index:20; max-height:30vh; overflow:auto; text-align:left; }
+  body.shownotes aside.notes { display:block; }
+  body.shownotes aside.notes:not(.cur) { display:none; }
+</style>
+</head>
+<body>
+<div id="bar"></div><div id="cnt"></div>
+<div id="hint">→ avanzar · ← retroceder · N notas (guion) · F pantalla · F11 completa</div>
+
+<!-- 1 PORTADA -->
+<section class="slide active">
+  <div><img class="logo" src="../27_BRAND_KIT/logo_dark_512.png" alt="Despierta">
+    <div class="kicker">Marc Souza · Método Despierta</div>
+    <h1 class="giant">DESPIERTA</h1>
+    <p class="sub">Nosce te ipsum — conócete a ti mismo.<br>Un webinar de 12 minutos que va a la causa real.</p></div>
+  <aside class="notes">Arranca grabando. Respira. Energía contenida, ritmo pausado.</aside>
+</section>
+
+<!-- 2 GANCHO -->
+<section class="slide bg" style="background-image:url('medios/real_image1.jpeg')">
+  <div><div class="kicker">El gancho</div>
+    <h1>Llevas meses, quizá años, <em>intentando estar bien.</em></h1>
+    <p class="sub">Psicólogo, pastillas, meditación, deporte, libros, retiros… tal vez ya lo probaste todo.</p></div>
+  <aside class="notes">“Llevas meses, quizá años, intentando estar bien. Tal vez ya probaste con un psicólogo, con pastillas, con meditación y deporte, libros de autoayuda e incluso algún retiro.”</aside>
+</section>
+
+<!-- 3 -->
+<section class="slide bg" style="background-image:url('medios/real_image1.jpeg')">
+  <div><div class="kicker">El gancho</div>
+    <h1>Y aun así, te despiertas con la misma <em>presión en el pecho.</em></h1>
+    <p class="sub">Y la cabeza sigue sin parar.</p></div>
+  <aside class="notes">“Y aun así, te sigues despertando con la misma presión en el pecho, y la cabeza sigue sin parar.”</aside>
+</section>
+
+<!-- 4 -->
+<section class="slide bg" style="background-image:url('medios/real_image2.jpeg')">
+  <div><div class="kicker">El gancho</div>
+    <h1>Vives en <em>piloto automático.</em></h1>
+    <p class="sub">Te levantas, trabajas, vuelves, cumples, caes en el sofá… ¿realmente es esto lo que quiero?</p></div>
+  <aside class="notes">“O tal vez despiertas con la sensación de vivir en piloto automático. Te levantas, trabajas, vuelves, cumples, caes en el sofá, y te preguntas: ¿realmente es esto lo que quiero?”</aside>
+</section>
+
+<!-- 5 -->
+<section class="slide bg" style="background-image:url('medios/real_image3.png')">
+  <div><div class="kicker">Quédate</div>
+    <h1>Si esto te pasa, quédate.</h1>
+    <p class="sub">En 12 minutos entenderás dónde está la causa — y por qué nada te funcionó de verdad.</p>
+    <img class="sello" src="../27_BRAND_KIT/logo_dark_64.png" alt=""></div>
+  <aside class="notes">“Si esto te está pasando, quédate, porque en los próximos doce minutos vas a entender exactamente dónde está la causa, y por qué nada de lo que has probado te ha funcionado de verdad.”</aside>
+</section>
+
+<!-- 6 AUTORIDAD -->
+<section class="slide split">
+  <div class="txt"><div class="kicker">Quién soy</div>
+    <h1>Soy <em>Marc Souza,</em> creador del Método DESPIERTA.</h1>
+    <p class="sub">No te hablo desde la teoría de un libro: te hablo desde haber salido de la oscuridad de la que muy pocos vuelven.</p></div>
+  <div class="pic"><img src="medios/foto_mentor_1.jpg" alt="Marc Souza"></div>
+  <aside class="notes">“Mi nombre es Marc Souza, creador del Método DESPIERTA. No hablo desde teoría: hablo desde haber salido de la oscuridad de la que muy pocos vuelven.” (Mírate a cámara. Esta foto eres tú: el mentor.)</aside>
+</section>
+
+<!-- 7 -->
+<section class="slide split">
+  <div class="txt"><div class="kicker">Mi historia</div>
+    <h1>Durante 18 meses, <em>todo se vino abajo a la vez.</em></h1>
+    <p class="sub">Madre dependiente · arruinado · recién vuelto de emigrar · sin nada. Mis ganas de vivir se apagaban.</p></div>
+  <div class="pic"><img src="medios/real_image6.jpeg" alt=""></div>
+  <aside class="notes">“Durante dieciocho meses, todo se vino abajo. Madre dependiente, arruinado, recién vuelto de emigrar, sin nada. Probé todo lo que funciona… y nada me sacaba.”</aside>
+</section>
+
+<!-- 8 -->
+<section class="slide bg" style="background-image:url('medios/real_image7.jpeg')">
+  <div><div class="kicker">El descubrimiento</div>
+    <h1>Hasta que descubrí algo que <em>me cambió la vida.</em></h1>
+    <p class="sub">La causa no estaba en mis circunstancias: estaba en una programación ejecutándose sin mi permiso desde hacía décadas.</p></div>
+  <aside class="notes">“Hasta que descubrí algo que me cambió la vida: la causa no estaba en mis circunstancias. Estaba en una programación de décadas ejecutándose sin mi permiso.” (Pausa tras “cambió la vida”.)</aside>
+</section>
+
+<!-- 9 -->
+<section class="slide bg" style="background-image:url('medios/real_image7.jpeg')">
+  <div><div class="kicker">El descubrimiento</div>
+    <h1>Cuando aprendí a cambiarla, mi realidad cambió. <em>No un poco. Por completo.</em></h1></div>
+  <aside class="notes">“Cuando aprendí a cambiarla, mi realidad cambió. Y no un poco: por completo.”</aside>
+</section>
+
+<!-- 10 -->
+<section class="slide bg" style="background-image:url('medios/real_image8.jpeg')">
+  <div><div class="kicker">El método</div>
+    <h1>El proceso que va a la <em>causa real.</em></h1>
+    <p class="sub">Ansiedad · estrés · bloqueos — eliminados desde donde se originan, no tapados.</p></div>
+  <aside class="notes">“Y eso que aprendí saliendo del fondo es lo que hoy enseño con el Método DESPIERTA: el proceso que va a la causa real.”</aside>
+</section>
+
+<!-- 11 VICENT -->
+<section class="slide split">
+  <div class="txt"><div class="kicker">Testimonio real</div>
+    <h1>Vicent vivía interpretando <em>un personaje que no era él.</em></h1>
+    <p class="sub">Sin socializar, sin valorarse, sin vivir — hasta que ese personaje se desintegró.</p></div>
+  <div class="pic"><img src="medios/real_image9.jpg" alt="Vicent"></div>
+  <aside class="notes">“Como Vicent: toda la vida interpretando un personaje de su programación. Sin socializar ni valorarse… hasta que se desintegró y creó su mejor versión. Mirad los testimonios.”</aside>
+</section>
+
+<!-- 12 -->
+<section class="slide fullimg">
+  <div class="pic"><img src="medios/testimonio_vicent_1.png" alt="Testimonio Vicent"></div>
+  <aside class="notes">Silencio. Deja leer. (Imagen original intacta.)</aside>
+</section>
+
+<!-- 13 -->
+<section class="slide fullimg">
+  <div class="pic"><img src="medios/testimonio_vicent_2.png" alt="Testimonio"></div>
+  <aside class="notes">Segundo testimonio. Pausa. (Imagen original intacta.)</aside>
+</section>
+
+<!-- 14 RUTA -->
+<section class="slide">
+  <div><div class="kicker">La ruta</div>
+    <h1>Tres movimientos. <em>En este orden.</em></h1>
+    <p class="sub">Porque el orden lo es todo.</p></div>
+  <aside class="notes">“Vas a entender tres cosas, en este orden, porque el orden lo es todo.”</aside>
+</section>
+
+<!-- 15 -->
+<section class="slide">
+  <div><div class="kicker">Los tres movimientos</div>
+    <h1 class="giant">DETECTAR · <em>DESINSTALAR</em> · REPROGRAMAR</h1></div>
+  <aside class="notes">“DETECTAR lo invisible. DESINSTALAR lo que te sabotea. REPROGRAMAR la calma automática. Sin el primero, vuelves al bloqueo.”</aside>
+</section>
+
+<!-- 16 CUALIFICACIÓN -->
+<section class="slide">
+  <div><div class="kicker">Para quién es</div>
+    <h1>Es para ti si por fuera funcionas — <em>pero por dentro hay agotamiento.</em></h1>
+    <p class="sub">Si ya lo intentaste todo y sigues igual. Si quieres entender qué te pasa, no taparlo.</p></div>
+  <aside class="notes">“Para ti si funcionas por fuera pero hay vacío dentro. Si lo intentaste y sigues igual. Si quieres entender, no tapar.”</aside>
+</section>
+
+<!-- 17 -->
+<section class="slide">
+  <div><div class="kicker">Para quién no es</div>
+    <h1>No es para ti si buscas <em>una pastilla mágica.</em></h1>
+    <p class="sub">Esto es un proceso — y pide que te impliques.</p></div>
+  <aside class="notes">“No es para ti si buscas magia sin implicarte. Esto es un proceso.”</aside>
+</section>
+
+<!-- 18 CTA -->
+<section class="slide">
+  <div><div class="kicker">Al final de este vídeo</div>
+    <h1>Podrás reservar una <em>sesión de exploración</em> conmigo.</h1>
+    <p class="sub">Sin presión. Miramos tu caso y vemos con honestidad si el método tiene sentido para ti.</p></div>
+  <aside class="notes">“Al final reservas una sesión de exploración. Sin presión: mirar tu caso con honestidad. Plazas limitadas. Sigamos.”</aside>
+</section>
+
+<!-- 19 HISTORIA -->
+<section class="slide">
+  <div><div class="kicker">Cómo pasa esto</div>
+    <h1>No empezó de un día para otro. <em>Empezó poco a poco.</em></h1>
+    <p class="sub">Más presión, más responsabilidad… y tu cuerpo aprendió a vivir en alerta.</p></div>
+  <aside class="notes">“Más presión, más responsabilidad, aguantar porque había que aguantar… y tu cuerpo aprendió a vivir en alerta. La presión del domingo, el modo trabajo en casa… Estando, pero sin estar.”</aside>
+</section>
+
+<!-- 20 -->
+<section class="slide">
+  <div><div class="kicker">Lo que nadie te explicó</div>
+    <h1>Todo lo que probaste trabaja de <em>fuera hacia dentro.</em></h1>
+    <p class="sub">Y lo que sientes no vive fuera: vive en tu subconsciente, ejecutándose solo cada día.</p></div>
+  <aside class="notes">“Médico, psicólogo, meditación, deporte, libros: todo de fuera hacia dentro. Y lo que sientes vive dentro — programación de hace décadas que se ejecuta sola.”</aside>
+</section>
+
+<!-- 21 -->
+<section class="slide">
+  <div><div class="kicker">La verdad</div>
+    <h1 class="giant">No estás roto.</h1>
+    <p class="sub">Estás ejecutando un programa que no escribiste. Y lo que se programó, se puede reprogramar.</p></div>
+  <aside class="notes">“No estás roto. Ejecutas un programa que no escribiste — y se puede reprogramar.” (El corazón del webinar. Despacio.)</aside>
+</section>
+
+<!-- 22 MOV 1 -->
+<section class="slide">
+  <div><div class="kicker">Movimiento 1 — VER</div>
+    <h1>Lo que no se ve, <em>no se puede cambiar.</em></h1>
+    <p class="sub">Hacemos visible lo invisible — y al verlo, pierde poder. No eres así: estás así.</p></div>
+  <aside class="notes">“VER: hacemos visible tu sistema de creencias y tu ego. Alivio: dejas de creerte roto. Cae el ‘yo soy así’. Pero verlo no lo desinstala…”</aside>
+</section>
+
+<!-- 23 MOV 2 -->
+<section class="slide">
+  <div><div class="kicker">Movimiento 2 — DESINSTALAR</div>
+    <h1>No es convivir con lo que sientes.<br><em>Es que deje de existir.</em></h1>
+    <p class="sub">Cerramos esas carpetas abiertas y bloqueamos el ego que te sabotea.</p></div>
+  <aside class="notes">“DESINSTALAR: vamos a la fuente y cerramos carpetas de verdad. Cuando se cierra, no se gestiona mejor: desaparece. Nunca desinstalaste la causa.”</aside>
+</section>
+
+<!-- 24 MOV 3 -->
+<section class="slide">
+  <div><div class="kicker">Movimiento 3 — REPROGRAMAR</div>
+    <h1>Dejas de esforzarte por estar bien.<br><em>Estás bien por defecto.</em></h1>
+    <p class="sub">Calma automática y permanente. Respondes en vez de reaccionar — y vuelves a reconocerte.</p></div>
+  <aside class="notes">“REPROGRAMAR: instalamos calma automática. Sin alarma 24h, el positivo sí sostiene. No se pide fe: compruébalo.”</aside>
+</section>
+
+<!-- 25 ACOMPAÑAMIENTO -->
+<section class="slide split">
+  <div class="txt"><div class="kicker">Cómo se entrega</div>
+    <h1>No es un curso.<br><em>Es un acompañamiento.</em></h1>
+    <p class="sub">Tu caso, tus carpetas, tu ritmo. Alguien que mira tu situación completa.</p></div>
+  <div class="pic"><img src="medios/foto_mentor_2.jpg" alt="Marc Souza"></div>
+  <aside class="notes">“No es un curso que ves solo: es acompañamiento de tu caso. Eso convierte la teoría en cambio.”</aside>
+</section>
+
+<!-- 26 DECISIÓN -->
+<section class="slide">
+  <div><div class="kicker">Decisión</div>
+    <h1>Dos opciones.</h1>
+    <p class="sub">Seguir ajustando piezas sueltas y dentro de un año estar igual… o que alguien mire tu caso completo.</p></div>
+  <aside class="notes">“Programación que se ve, se desinstala y se reprograma. Opción uno: igual dentro de un año. Opción dos: claridad.”</aside>
+</section>
+
+<!-- 27 RESERVA -->
+<section class="slide">
+  <div><img class="logo" src="../27_BRAND_KIT/logo_dark_512.png" alt="Despierta">
+    <div class="kicker">Reserva</div>
+    <h1>Reserva tu <em>sesión de exploración.</em></h1>
+    <p class="sub">Llevas años esperando el momento. El momento no llega solo.</p></div>
+  <aside class="notes">“Botón debajo. Conversación honesta, plazas limitadas. Reserva. Y lo vemos juntos.”</aside>
+</section>
+
+<!-- 28 CIERRE -->
+<section class="slide">
+  <div><div class="kicker">¿Aún no lo ves claro?</div>
+    <h1 class="giant">Escríbeme <em>DESPIERTA.</em></h1>
+    <p class="sub">Por mensaje privado. Sin compromiso.</p></div>
+  <aside class="notes">“Si algo resonó, escríbeme DESPIERTA y te explico el proceso.” (Energía alta. Corta.)</aside>
+</section>
+
+<script>
+let i = 0;
+const slides = document.querySelectorAll('.slide');
+const bar = document.getElementById('bar'), cnt = document.getElementById('cnt');
+function show(n) {
+  i = Math.max(0, Math.min(slides.length - 1, n));
+  slides.forEach((s, k) => { s.classList.toggle('active', k === i);
+    s.querySelectorAll('aside.notes').forEach(a => a.classList.toggle('cur', k === i)); });
+  bar.style.width = ((i + 1) / slides.length * 100) + '%';
+  cnt.textContent = (i + 1) + ' / ' + slides.length;
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); show(i + 1); }
+  if (e.key === 'ArrowLeft') show(i - 1);
+  if (e.key.toLowerCase() === 'n') document.body.classList.toggle('shownotes');
+  if (e.key.toLowerCase() === 'f') document.documentElement.requestFullscreen().catch(()=>{});
+});
+document.addEventListener('click', () => show(i + 1));
+show(0);
+</script>
+</body>
+</html>

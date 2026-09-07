@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Método DESPIERTA — Presentación Webinar (Marc Souza)</title>
+<style>
+  :root { --negro:#0d0d0f; --ambar:#e8a33d; --crema:#f5efe4; --gris:#8a8a90; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { height:100%; background:#000; font-family:Georgia,'Times New Roman',serif; color:var(--crema); overflow:hidden; }
+  .slide { display:none; height:100vh; width:100vw; background:var(--negro);
+    flex-direction:row; align-items:center; justify-content:center; gap:4vw; padding:5vh 6vw; }
+  .slide.active { display:flex; }
+  .slide.full { flex-direction:column; text-align:center; }
+  .txt { flex:1; max-width:44vw; }
+  .full .txt { max-width:70vw; }
+  .kicker { color:var(--ambar); letter-spacing:.35em; font-size:2vh; text-transform:uppercase; margin-bottom:2vh; }
+  h1 { font-size:6.5vh; line-height:1.15; font-weight:normal; }
+  h1 em { color:var(--ambar); font-style:normal; }
+  p.sub { margin-top:2.5vh; font-size:2.6vh; color:var(--gris); line-height:1.5; }
+  .pic { flex:1; max-width:40vw; display:flex; align-items:center; justify-content:center; }
+  .pic img { max-width:100%; max-height:82vh; border-radius:1vh; box-shadow:0 0 6vh rgba(232,163,61,.18); object-fit:contain; }
+  .fullimg img { max-height:88vh; }
+  .logo { height:14vh; margin-bottom:3vh; }
+  #bar { position:fixed; bottom:0; left:0; height:.7vh; background:var(--ambar); width:0; z-index:10; }
+  #cnt { position:fixed; bottom:2vh; right:2.5vw; color:var(--gris); font-size:2vh; z-index:10; }
+  #hint { position:fixed; bottom:2vh; left:2.5vw; color:#4a4a50; font-size:1.8vh; z-index:10; }
+  aside.notes { display:none; position:fixed; bottom:6vh; left:6vw; right:6vw; background:#1a1a1e;
+    border-left:.5vh solid var(--ambar); padding:2vh 2vw; font-size:2.2vh; line-height:1.5; color:#d8d2c4; z-index:20; max-height:30vh; overflow:auto; }
+  body.shownotes aside.notes { display:block; }
+  body.shownotes aside.notes:not(.cur) { display:none; }
+</style>
+</head>
+<body>
+<div id="bar"></div><div id="cnt"></div>
+<div id="hint">→ avanzar · ← retroceder · N notas · F11 pantalla completa</div>
+
+<!-- 1 PORTADA -->
+<section class="slide full active">
+  <div class="txt"><img class="logo" src="../27_BRAND_KIT/logo_dark_512.png" alt="Despierta">
+    <div class="kicker">Marc Souza · Método Despierta</div>
+    <h1>Nosce te ipsum.<br><em>Conócete a ti mismo.</em></h1>
+    <p class="sub">Un webinar de 12 minutos que va a la causa real.</p></div>
+  <aside class="notes">NOTAS (solo tú las ves con N): arranca grabando. Respira. Ritmo pausado.</aside>
+</section>
+
+<!-- 2 GANCHO -->
+<section class="slide">
+  <div class="txt"><div class="kicker">1 · Gancho</div>
+    <h1>Llevas meses, quizá años, <em>intentando estar bien.</em></h1></div>
+  <div class="pic"><img src="medios/real_image1.jpeg" alt=""></div>
+  <aside class="notes">“Llevas meses, quizá años, intentando estar bien. Tal vez ya probaste con un psicólogo, con pastillas, con meditación y deporte, libros de autoayuda e incluso algún retiro.”</aside>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="txt"><div class="kicker">1 · Gancho</div>
+    <h1>Y aun así, te despiertas con la misma <em>presión en el pecho.</em></h1></div>
+  <div class="pic"><img src="medios/real_image2.jpeg" alt=""></div>
+  <aside class="notes">“Y aun así, te sigues despertando con la misma presión en el pecho, y la cabeza sigue sin parar.”</aside>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="txt"><div class="kicker">1 · Gancho</div>
+    <h1>Vives en <em>piloto automático.</em></h1>
+    <p class="sub">Te levantas, trabajas, vuelves, cumples, caes en el sofá… ¿Realmente es esto lo que quiero?</p></div>
+  <div class="pic"><img src="medios/real_image3.png" alt=""></div>
+  <aside class="notes">“O tal vez despiertas con la sensación de vivir en piloto automático. Te levantas, trabajas, vuelves, cumples, caes en el sofá, y te preguntas: ¿realmente es esto lo que quiero?”</aside>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="txt"><div class="kicker">1 · Gancho</div>
+    <h1>Quédate: en 12 minutos vas a entender <em>dónde está la causa.</em></h1></div>
+  <div class="pic"><img src="medios/real_image4.jpeg" alt=""></div>
+  <aside class="notes">“Si esto te está pasando, quédate, porque en los próximos doce minutos vas a entender exactamente dónde está la causa, y por qué nada de lo que has probado te ha funcionado de verdad.”</aside>
+</section>
+
+<!-- 6 AUTORIDAD -->
+<section class="slide">
+  <div class="txt"><div class="kicker">2 · Quién soy</div>
+    <h1>Soy Marc Souza, creador del <em>Método DESPIERTA.</em></h1>
+    <p class="sub">No te hablo desde la teoría de un libro.</p></div>
+  <div class="pic"><img src="medios/real_image5.png" alt=""></div>
+  <aside class="notes">“Mi nombre es Marc Souza, y soy el creador del Método DESPIERTA. No te hablo desde la teoría sacada de un libro. Te hablo desde la experiencia propia de haber salido de la oscuridad de la que muy pocos vuelven.”</aside>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="txt"><div class="kicker">2 · Quién soy</div>
+    <h1>Durante 18 meses, <em>todo se vino abajo.</em></h1>
+    <p class="sub">Madre dependiente · arruinado · recién vuelto de emigrar · sin nada.</p></div>
+  <div class="pic"><img src="medios/real_image6.jpeg" alt=""></div>
+  <aside class="notes">“Durante dieciocho meses, todo a la vez en mi vida se vino abajo. Cuidaba a mi madre, totalmente dependiente. Estaba arruinado, recién vuelto de emigrar, sin nada. Mis ganas de vivir se apagaban.”</aside>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="txt"><div class="kicker">2 · El descubrimiento</div>
+    <h1>La causa no estaba en mis circunstancias. <em>Estaba en mi programación.</em></h1></div>
+  <div class="pic"><img src="medios/real_image7.jpeg" alt=""></div>
+  <aside class="notes">“Hasta que descubrí algo que me cambió la vida: la causa no estaba en mis circunstancias. Estaba en una programación que llevaba décadas ejecutándose dentro de mí sin mi permiso. Cuando aprendí a cambiarla, mi realidad cambió por completo.”</aside>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="txt"><div class="kicker">2 · El método</div>
+    <h1>El proceso que va a la <em>causa real.</em></h1>
+    <p class="sub">Ansiedad · estrés · bloqueos — eliminados desde donde se originan.</p></div>
+  <div class="pic"><img src="medios/real_image8.jpeg" alt=""></div>
+  <aside class="notes">“Y eso que aprendí saliendo del fondo es lo que hoy enseño con el Método DESPIERTA: el proceso que va a la causa real de la ansiedad, el estrés y la mayoría de nuestros bloqueos.”</aside>
+</section>
+
+<!-- 10 TESTIMONIO -->
+<section class="slide">
+  <div class="txt"><div class="kicker">Testimonio real</div>
+    <h1>Vicent <em>reprogramó su mentalidad</em> hasta crear su mejor versión.</h1></div>
+  <div class="pic"><img src="medios/real_image9.jpg" alt=""></div>
+  <aside class="notes">“Como le sucedió a Vicent, que llevaba toda la vida interpretando un personaje basado en su programación. Ese personaje se desintegró durante el proceso, y Vicent reprogramó su mentalidad. Podéis verlo en los testimonios.”</aside>
+</section>
+
+<!-- 11 TESTIMONIO IMG -->
+<section class="slide full fullimg">
+  <div class="pic"><img src="medios/testimonio_vicent_1.png" alt="Testimonio Vicent"></div>
+  <aside class="notes">Deja que lean el testimonio en silencio unos segundos. (Imagen original intacta.)</aside>
+</section>
+
+<!-- 12 TESTIMONIO IMG -->
+<section class="slide full fullimg">
+  <div class="pic"><img src="medios/testimonio_vicent_2.png" alt="Testimonio"></div>
+  <aside class="notes">Segundo testimonio. Pausa. Que respire. (Imagen original intacta.)</aside>
+</section>
+
+<!-- 13 LA RUTA -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">3 · La ruta</div>
+    <h1>Tres movimientos. <em>En este orden.</em></h1>
+    <p class="sub">Porque el orden lo es todo.</p></div>
+  <aside class="notes">“En los próximos minutos vas a entender tres cosas, y van en este orden, porque el orden lo es todo.”</aside>
+</section>
+
+<!-- 14 3 MOVIMIENTOS -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">3 · La ruta</div>
+    <h1>DETECTAR · <em>DESINSTALAR</em> · REPROGRAMAR</h1></div>
+  <aside class="notes">“Primero, DETECTAR: ver la programación invisible. Segundo, DESINSTALAR: cerrar lo que te sabotea. Tercero, REPROGRAMAR: instalar calma, presencia y control. No son tres consejos sueltos: si intentas el segundo sin el primero, vuelves al bloqueo.”</aside>
+</section>
+
+<!-- 15 CUALIFICACIÓN -->
+<section class="slide">
+  <div class="txt"><div class="kicker">4 · Para quién es</div>
+    <h1>Esto es para ti si por fuera funcionas, <em>pero por dentro hay vacío.</em></h1></div>
+  <div class="pic"><img src="medios/real_image1.jpeg" alt=""></div>
+  <aside class="notes">“Esto es para ti si llevas tiempo funcionando por fuera —cumples, produces, sostienes a los tuyos— pero por dentro sientes agotamiento, tensión o vacío. Si ya intentaste cosas y sigues igual. Y si quieres entender qué te pasa, no solo taparlo.”</aside>
+</section>
+
+<!-- 16 -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">4 · Para quién NO es</div>
+    <h1>No es para ti si buscas <em>una pastilla mágica.</em></h1>
+    <p class="sub">Esto es un proceso, y pide que te impliques.</p></div>
+  <aside class="notes">“No es para ti si buscas una pastilla mágica, si quieres que te den la razón para no cambiar nada, o si solo buscas información gratis. Esto es un proceso, y pide que te impliques.”</aside>
+</section>
+
+<!-- 17 CTA TEMPRANO -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">5 · Al final del vídeo</div>
+    <h1>Podrás reservar una <em>sesión de exploración</em> conmigo.</h1>
+    <p class="sub">Sin presión. Plazas limitadas, acompañamiento personalizado.</p></div>
+  <aside class="notes">“Al final de este vídeo vas a poder reservar una sesión de exploración directamente conmigo. No es para presionarte: es mirar tu caso —qué probaste, qué falla— y ver con honestidad si el método tiene sentido para ti.”</aside>
+</section>
+
+<!-- 18 HISTORIA -->
+<section class="slide">
+  <div class="txt"><div class="kicker">6 · Cómo pasa esto</div>
+    <h1>No empezó de un día para otro. <em>Empezó poco a poco.</em></h1></div>
+  <div class="pic"><img src="medios/real_image2.jpeg" alt=""></div>
+  <aside class="notes">“No empezó de un día para otro. Más presión, más responsabilidad, cosas que aguantaste porque había que aguantar. Y sin darte cuenta, tu cuerpo aprendió a vivir en alerta. La presión del domingo por la tarde, llegar a casa y seguir en modo trabajo… Estando, pero sin estar.”</aside>
+</section>
+
+<!-- 19 -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">6 · Lo que nadie te explicó</div>
+    <h1>Todo lo que probaste trabaja de <em>fuera hacia dentro.</em></h1>
+    <p class="sub">Y lo que sientes no vive fuera. Vive en tu subconsciente.</p></div>
+  <aside class="notes">“Médico, psicólogo, meditación, deporte, libros… Todo trabaja de fuera hacia dentro. Y lo que sientes no vive fuera: vive en el subconsciente, en una programación instalada hace décadas. Esas creencias no se piensan: se ejecutan solas todos los días.”</aside>
+</section>
+
+<!-- 20 -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">6 · La verdad</div>
+    <h1>No estás roto.<br><em>Estás ejecutando un programa que no escribiste.</em></h1>
+    <p class="sub">Y lo que se programó, se puede reprogramar.</p></div>
+  <aside class="notes">“No estás roto. Estás ejecutando un programa que no escribiste. Y lo que se programó, se puede reprogramar. Pero hay que ir donde casi nadie va. Y se hace en tres movimientos.”</aside>
+</section>
+
+<!-- 21 MOV 1 -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">7 · Movimiento 1 — VER</div>
+    <h1>Lo que no se ve, <em>no se puede cambiar.</em></h1>
+    <p class="sub">Ya no eres “una persona ansiosa”. No eres así: estás así.</p></div>
+  <aside class="notes">“Primer movimiento: VER. El mercado te calma sin enseñarte qué cambiar —como arreglar un motor sin abrir el capó. Nosotros hacemos visible lo invisible: tu sistema de creencias, tu ego. Y cuando lo ves, pierde poder. Cae el ‘yo soy así’: no eres así, estás así. Pero ver el programa no lo desinstala…”</aside>
+</section>
+
+<!-- 22 MOV 2 -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">8 · Movimiento 2 — DESINSTALAR</div>
+    <h1>No se trata de convivir con lo que sientes.<br><em>Se trata de que deje de existir.</em></h1></div>
+  <aside class="notes">“Segundo movimiento: DESINSTALAR. La terapia va conflicto a conflicto, lenta. Tu subconsciente no tiene noción del tiempo: lo no cerrado sigue activo como amenaza. Este proceso va a la fuente, cierra esas carpetas y bloquea el ego que te sabotea. Cuando se cierra, no se gestiona mejor: desaparece. Nunca has desinstalado la causa.”</aside>
+</section>
+
+<!-- 23 MOV 3 -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">9 · Movimiento 3 — REPROGRAMAR</div>
+    <h1>Dejas de esforzarte por estar bien.<br><em>Estás bien por defecto.</em></h1></div>
+  <aside class="notes">“Tercer movimiento: REPROGRAMAR. El pensamiento positivo no sostiene si el subconsciente ejecuta alarma 24h —es pintar una pared con humedad. Instalamos el sistema de calma automática y permanente. Cambias el programa y recuperas a la persona de debajo: ilusión, presencia, reconocerte. No se pide fe: sigue la lógica y compruébalo.”</aside>
+</section>
+
+<!-- 24 ACOMPAÑAMIENTO -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">10 · Cómo se entrega</div>
+    <h1>No es un curso.<br><em>Es un acompañamiento.</em></h1>
+    <p class="sub">Tu caso, tus carpetas, tu ritmo, paso a paso.</p></div>
+  <aside class="notes">“Saber qué hacer no es hacerlo. Si bastara la información, los libros ya te habrían cambiado. DESPIERTA no es un curso que ves solo: es acompañamiento de tu caso completo. Eso convierte la teoría en un cambio que se queda.”</aside>
+</section>
+
+<!-- 25 CTA FINAL -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">11 · Decisión</div>
+    <h1>Dos opciones.</h1>
+    <p class="sub">Seguir ajustando piezas sueltas… o sentarte con alguien que mire tu caso completo.</p></div>
+  <aside class="notes">“Recapitulemos: lo que sientes es una programación que se puede ver, desinstalar y reprogramar. Opción uno: seguir como hasta ahora y dentro de un año estar igual. Opción dos: sentarte con alguien que mire tu caso y te diga con honestidad qué te pasa.”</aside>
+</section>
+
+<!-- 26 -->
+<section class="slide full">
+  <div class="txt"><img class="logo" src="../27_BRAND_KIT/logo_dark_512.png" alt="Despierta">
+    <div class="kicker">11 · Reserva</div>
+    <h1>Reserva tu <em>sesión de exploración.</em></h1>
+    <p class="sub">Llevas años esperando el momento. El momento no llega solo.</p></div>
+  <aside class="notes">“Justo debajo tienes el botón para reservar. No es venta agresiva: es ver tu caso y decidir con criterio. Plazas limitadas. Llevas años esperando el momento: el momento no llega solo, porque lo que te frena es justo lo que hay que resolver. Reserva.”</aside>
+</section>
+
+<!-- 27 -->
+<section class="slide full">
+  <div class="txt"><div class="kicker">¿Aún no lo ves claro?</div>
+    <h1>Escríbeme <em>DESPIERTA</em> por privado.</h1>
+    <p class="sub">Te explico cómo funciona el proceso, sin compromiso.</p></div>
+  <aside class="notes">“Y si todavía no lo ves claro pero algo te resonó, escríbeme DESPIERTA por mensaje privado y te explico el proceso, sin compromiso.” (Cierre. Corta grabación.)</aside>
+</section>
+
+</div>
+<script>
+let i = 0;
+const slides = document.querySelectorAll('.slide');
+const bar = document.getElementById('bar'), cnt = document.getElementById('cnt');
+function show(n) {
+  i = Math.max(0, Math.min(slides.length - 1, n));
+  slides.forEach((s, k) => { s.classList.toggle('active', k === i);
+    s.querySelectorAll('aside.notes').forEach(a => a.classList.toggle('cur', k === i)); });
+  bar.style.width = ((i + 1) / slides.length * 100) + '%';
+  cnt.textContent = (i + 1) + ' / ' + slides.length;
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1);
+  if (e.key === 'ArrowLeft') show(i - 1);
+  if (e.key.toLowerCase() === 'n') document.body.classList.toggle('shownotes');
+  if (e.key.toLowerCase() === 'f') document.documentElement.requestFullscreen().catch(()=>{});
+});
+document.addEventListener('click', () => show(i + 1));
+show(0);
+</script>
+</body>
+</html>

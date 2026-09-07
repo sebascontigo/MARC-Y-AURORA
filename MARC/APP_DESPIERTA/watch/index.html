@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>DESPIERTA · Calma</title>
+    <meta name="theme-color" content="#0e0e11" />
+    <style>
+      :root {
+        --bg: #0e0e11;
+        --ink: #ece7dd;
+        --accent: #e8a54b;
+        --line: rgba(236, 231, 221, 0.15);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: radial-gradient(circle at 50% 20%, #1a1610, var(--bg) 70%);
+        color: var(--ink);
+        font-family: "Segoe UI", Roboto, sans-serif;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        -webkit-user-select: none;
+        user-select: none;
+        overflow: hidden;
+      }
+      .stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 18px;
+      }
+      .logo {
+        font-size: 0.68rem;
+        letter-spacing: 0.3em;
+        color: var(--accent);
+      }
+      #circle {
+        width: min(58vmin, 300px);
+        height: min(58vmin, 300px);
+        border-radius: 50%;
+        border: 2.5px solid var(--accent);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        background: radial-gradient(
+          circle,
+          rgba(232, 165, 75, 0.28),
+          rgba(232, 165, 75, 0.05)
+        );
+        font-family: Georgia, serif;
+        font-size: min(7vmin, 34px);
+        color: var(--accent);
+        transition: transform 4s ease;
+        box-shadow: 0 0 40px rgba(232, 165, 75, 0.15);
+      }
+      #circle:active {
+        transform: scale(0.94);
+      }
+      #circle.inhale {
+        transform: scale(1.22);
+      }
+      #circle.hold {
+        transform: scale(1.22);
+      }
+      #circle.exhale {
+        transform: scale(0.8);
+      }
+      #status {
+        font-size: min(3.4vmin, 15px);
+        color: #a49c8d;
+        min-height: 1.4em;
+        max-width: 80vmin;
+      }
+      .mini {
+        font-size: 0.72rem;
+        color: #6a6459;
+      }
+      audio {
+        display: none;
+      }
+      #circle:focus-visible {
+        outline: 3px solid var(--ink);
+        outline-offset: 4px;
+      }
+      /* Accesibilidad: sin movimiento si el sistema lo pide; la guia sigue siendo por texto */
+      @media (prefers-reduced-motion: reduce) {
+        #circle,
+        #circle.inhale,
+        #circle.hold,
+        #circle.exhale,
+        #circle:active {
+          transition: none !important;
+          transform: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <span class="logo">D E S P I E R T A · CALMA</span>
+      <div
+        id="circle"
+        role="button"
+        tabindex="0"
+        aria-label="Iniciar o detener la calma guiada"
+        onclick="sos()"
+      >
+        Pulsa<br />para calma
+      </div>
+      <div id="status" role="status" aria-live="polite">
+        Voz de Marc + respiración guiada
+      </div>
+      <span class="mini">despierta-app.netlify.app</span>
+      <audio id="au" src="../audios/calma_marc.mp3" preload="none"></audio>
+    </div>
+    <script>
+      let running = false,
+        t = null;
+      const SEQ = [
+        ["INSPIRA", "inhale", 4000],
+        ["SOSTÉN", "hold", 4000],
+        ["EXHALA", "exhale", 6000],
+      ];
+      function sos() {
+        const c = document.getElementById("circle"),
+          st = document.getElementById("status"),
+          a = document.getElementById("au");
+        if (running) {
+          running = false;
+          clearTimeout(t);
+          c.className = "";
+          c.innerHTML = "Pulsa<br>para calma";
+          st.textContent = "Voz de Marc + respiración guiada";
+          return;
+        }
+        running = true;
+        try {
+          a.currentTime = 0;
+          a.play().catch(() => {});
+        } catch (e) {}
+        step(0, 4, c, st);
+      }
+      function step(i, left, c, st) {
+        if (!running) return;
+        if (i >= SEQ.length) {
+          i = 0;
+          left--;
+        }
+        if (left <= 0) {
+          running = false;
+          c.className = "";
+          c.innerHTML = "✓ Aquí y ahora";
+          st.textContent = "Bien hecho. — MARC";
+          if (navigator.vibrate) navigator.vibrate([120, 60, 120]);
+          return;
+        }
+        const [lbl, cls, ms] = SEQ[i];
+        c.className = cls;
+        c.textContent = lbl;
+        if (navigator.vibrate)
+          navigator.vibrate(lbl === "EXHALA" ? [90] : [40]);
+        t = setTimeout(() => step(i + 1, left, c, st), ms);
+      }
+      // Teclado: Enter o Espacio activan/paran igual que el toque (accesibilidad)
+      document.getElementById("circle").addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          sos();
+        }
+      });
+    </script>
+  </body>
+</html>
