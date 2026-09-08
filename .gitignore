@@ -68,3 +68,6 @@ __pycache__/
 
 # Copias de trabajo para edicion manual (originales en Videos_Reels/)
 MARC/29_DRIVE/00_REELS_EN_BRUTO/
+
+# Videos Aurora +100MB (igual que Marc: Drive + disco)
+AURORA/08_DRIVE/Imagenes_Aurora/*.mp4
