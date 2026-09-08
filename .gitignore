@@ -63,3 +63,6 @@ desktop.ini
 __pycache__/
 # Intermedios de montaje de video (regenerables)
 **/_todo_tmp/
+
+# Copias de trabajo para edicion manual (originales en Videos_Reels/)
+MARC/29_DRIVE/00_REELS_EN_BRUTO/
