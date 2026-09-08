@@ -39,6 +39,8 @@ MARC/28_PRESENTACION/_descartado/
 # patrones de credenciales (verificado 5-sep: 61 archivos con coincidencias)
 00_CONTROL/HISTORIAL_SESIONES/
 00_CONTROL/01_PROMPTS_Y_CONTEXTO/
+# Excepcion 8-sep: los 5 PROMPT_*.md son docs operativos limpios (barrido sin secretos)
+!00_CONTROL/01_PROMPTS_Y_CONTEXTO/PROMPT_*.md
 
 # Scripts de login/estado de Instagram: contienen campos usuario/credencial
 00_CONTROL/_ig_login*.py
