@@ -85,19 +85,19 @@
 | 078 | 2026-08-15 (mtime) | MARC | Auditoría | 02_INVENTARIO_MARC.md | `MARC\00_AUDITORIA_MAESTRA\02_INVENTARIO_MARC.md` |
 | 079 | 2026-08-15 (mtime) | MARC | Auditoría | 03_MAPA_DEL_NEGOCIO_MARC.md | `MARC\00_AUDITORIA_MAESTRA\03_MAPA_DEL_NEGOCIO_MARC.md` |
 | 080 | 2026-08-15 (mtime) | MARC | Auditoría | 04_MAPA_DE_MARKETING_MARC.md | `MARC\00_AUDITORIA_MAESTRA\04_MAPA_DE_MARKETING_MARC.md` |
-| 081 | 2026-08-15 (mtime) | MARC | Auditoría | 05_MAPA_DEL_EMBUDO_MARC.md | `MARC\05_MAPA_DEL_EMBUDO_MARC.md` |
-| 082 | 2026-08-15 (mtime) | MARC | Auditoría | 06_MAPA_DE_AUTOMATIZACIONES_MARC.md | `MARC\06_MAPA_DE_AUTOMATIZACIONES_MARC.md` |
-| 083 | 2026-08-15 (mtime) | MARC | Auditoría | 07_AUDITORIA_DE_HERRAMIENTAS_MARC.md | `MARC\07_AUDITORIA_DE_HERRAMIENTAS_MARC.md` |
-| 084 | 2026-08-15 (mtime) | MARC | Auditoría | 08_AUDITORIA_FINANCIERA_MARC.md | `MARC\08_AUDITORIA_FINANCIERA_MARC.md` |
-| 085 | 2026-08-15 (mtime) | MARC | Contrato | 09_AUDITORIA_CONTRACTUAL_MARC.md | `MARC\09_AUDITORIA_CONTRACTUAL_MARC.md` |
-| 086 | 2026-08-15 (mtime) | MARC | Estrategia/KPI | 10_KPI_Y_METRICAS_MARC.md | `MARC\10_KPI_Y_METRICAS_MARC.md` |
-| 087 | 2026-08-15 (mtime) | MARC | Estrategia/KPI | 11_RIESGOS_MARC.md | `MARC\11_RIESGOS_MARC.md` |
-| 088 | 2026-08-15 (mtime) | MARC | Estrategia/KPI | 12_OPORTUNIDADES_MARC.md | `MARC\12_OPORTUNIDADES_MARC.md` |
-| 089 | 2026-08-15 (mtime) | MARC | General | 13_PREGUNTAS_PARA_MARC.md | `MARC\13_PREGUNTAS_PARA_MARC.md` |
-| 090 | 2026-08-15 (mtime) | MARC | Estrategia/KPI | 14_PLAN_30_60_90_MARC.md | `MARC\14_PLAN_30_60_90_MARC.md` |
-| 091 | 2026-08-15 (mtime) | MARC | Escala/Reuniones | 15_REUNION_BRIEF_MARC.md | `MARC\15_REUNION_BRIEF_MARC.md` |
-| 092 | 2026-08-15 (mtime) | MARC | General | 16_DOCUMENTO_ALINEACION_MARC.md | `MARC\16_DOCUMENTO_ALINEACION_MARC.md` |
-| 093 | 2026-08-15 (mtime) | MARC | General | 17_FUENTES_MARC.md | `MARC\17_FUENTES_MARC.md` |
+| 081 | 2026-08-15 (mtime) | MARC | Auditoría | 05_MAPA_DEL_EMBUDO_MARC.md | `MARC\00_AUDITORIA_MAESTRA\05_MAPA_DEL_EMBUDO_MARC.md` |
+| 082 | 2026-08-15 (mtime) | MARC | Auditoría | 06_MAPA_DE_AUTOMATIZACIONES_MARC.md | `MARC\00_AUDITORIA_MAESTRA\06_MAPA_DE_AUTOMATIZACIONES_MARC.md` |
+| 083 | 2026-08-15 (mtime) | MARC | Auditoría | 07_AUDITORIA_DE_HERRAMIENTAS_MARC.md | `MARC\00_AUDITORIA_MAESTRA\07_AUDITORIA_DE_HERRAMIENTAS_MARC.md` |
+| 084 | 2026-08-15 (mtime) | MARC | Auditoría | 08_AUDITORIA_FINANCIERA_MARC.md | `MARC\00_AUDITORIA_MAESTRA\08_AUDITORIA_FINANCIERA_MARC.md` |
+| 085 | 2026-08-15 (mtime) | MARC | Contrato | 09_AUDITORIA_CONTRACTUAL_MARC.md | `MARC\00_AUDITORIA_MAESTRA\09_AUDITORIA_CONTRACTUAL_MARC.md` |
+| 086 | 2026-08-15 (mtime) | MARC | Estrategia/KPI | 10_KPI_Y_METRICAS_MARC.md | `MARC\00_AUDITORIA_MAESTRA\10_KPI_Y_METRICAS_MARC.md` |
+| 087 | 2026-08-15 (mtime) | MARC | Estrategia/KPI | 11_RIESGOS_MARC.md | `MARC\00_AUDITORIA_MAESTRA\11_RIESGOS_MARC.md` |
+| 088 | 2026-08-15 (mtime) | MARC | Estrategia/KPI | 12_OPORTUNIDADES_MARC.md | `MARC\00_AUDITORIA_MAESTRA\12_OPORTUNIDADES_MARC.md` |
+| 089 | 2026-08-15 (mtime) | MARC | General | 13_PREGUNTAS_PARA_MARC.md | `MARC\00_AUDITORIA_MAESTRA\13_PREGUNTAS_PARA_MARC.md` |
+| 090 | 2026-08-15 (mtime) | MARC | Estrategia/KPI | 14_PLAN_30_60_90_MARC.md | `MARC\00_AUDITORIA_MAESTRA\14_PLAN_30_60_90_MARC.md` |
+| 091 | 2026-08-15 (mtime) | MARC | Escala/Reuniones | 15_REUNION_BRIEF_MARC.md | `MARC\00_AUDITORIA_MAESTRA\15_REUNION_BRIEF_MARC.md` |
+| 092 | 2026-08-15 (mtime) | MARC | General | 16_DOCUMENTO_ALINEACION_MARC.md | `MARC\00_AUDITORIA_MAESTRA\16_DOCUMENTO_ALINEACION_MARC.md` |
+| 093 | 2026-08-15 (mtime) | MARC | General | 17_FUENTES_MARC.md | `MARC\00_AUDITORIA_MAESTRA\17_FUENTES_MARC.md` |
 | 094 | 2026-08-15 (mtime) | MARC | Contrato | 5.0 IE6 - Contrato de prestación de servicios y garantía de resultados.pdf | `MARC\Chat de WhatsApp con MARC\5.0 IE6 - Contrato de prestación de servicios y garantía de resultados.pdf` |
 | 095 | 2026-08-15 (mtime) | MARC | Chat/Audios | Chat de WhatsApp con MARC.txt | `MARC\Chat de WhatsApp con MARC\Chat de WhatsApp con MARC.txt` |
 | 096 | 2026-08-15 (mtime) | MARC | CV/Perfil | CVREDES.pdf | `MARC\Chat de WhatsApp con MARC\CVREDES.pdf` |
@@ -106,9 +106,9 @@
 | 099 | 2026-08-15 (mtime) | MARC | Escala/Reuniones | Doc3_Contexto_Escala_Marc.pdf | `MARC\Chat de WhatsApp con MARC\Doc3_Contexto_Escala_Marc.pdf` |
 | 100 | 2026-08-15 (mtime) | MARC | Chat/Audios | Info básic para Sebastian.docx | `MARC\Chat de WhatsApp con MARC\Info básic para Sebastian.docx` |
 | 101 | 2026-08-15 (mtime) | MARC | Chat/Audios | INFORME - IMPODERATE.pdf | `MARC\Chat de WhatsApp con MARC\INFORME - IMPODERATE.pdf` |
-| 102 | 2026-08-15 (mtime) | MARC | General | MARC_1_MINUTO.md | `MARC\MARC_1_MINUTO.md` |
-| 103 | 2026-08-15 (mtime) | MARC | General | MARC_DOCUMENTO_ALINEACION.md | `MARC\MARC_DOCUMENTO_ALINEACION.md` |
-| 104 | 2026-08-15 (mtime) | MARC | Escala/Reuniones | MARC_REUNION_BRIEF.md | `MARC\MARC_REUNION_BRIEF.md` |
+| 102 | 2026-08-15 (mtime) | MARC | General | MARC_1_MINUTO.md | `MARC\01_Contexto_Alineacion\MARC_1_MINUTO.md` |
+| 103 | 2026-08-15 (mtime) | MARC | General | MARC_DOCUMENTO_ALINEACION.md | `MARC\01_Contexto_Alineacion\MARC_DOCUMENTO_ALINEACION.md` |
+| 104 | 2026-08-15 (mtime) | MARC | Escala/Reuniones | MARC_REUNION_BRIEF.md | `MARC\01_Contexto_Alineacion\MARC_REUNION_BRIEF.md` |
 | 105 | 2026-08-15 (mtime) | MARC | Finanzas | Oferta_Colaboracion_Sebastian.xlsx | `MARC\Chat de WhatsApp con MARC\Oferta_Colaboracion_Sebastian.xlsx` |
 | 106 | 2026-08-15 | MARC | Chat/Audios | PTT-20260815-WA0071.txt | `MARC\Chat de WhatsApp con MARC\transcripts\PTT-20260815-WA0071.txt` |
 | 107 | 2026-08-15 | MARC | Chat/Audios | PTT-20260815-WA0073.txt | `MARC\Chat de WhatsApp con MARC\transcripts\PTT-20260815-WA0073.txt` |

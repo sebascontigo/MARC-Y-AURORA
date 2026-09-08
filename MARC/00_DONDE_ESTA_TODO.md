@@ -3,7 +3,7 @@
 > Mapa simple de la carpeta MARC. Nada se ha movido ni borrado: esto solo explica.
 
 ## Para publicar HOY (la cola)
-- `MARC/KIT_PUBLICACION_10MIN.md` → plan día por día: copiar, pegar, subir.
+- `MARC/CONTENIDO/KIT_PUBLICACION_10MIN.md` → plan día por día: copiar, pegar, subir.
 - Reels (4, con hook + CTA ya dentro): `MARC/21_TESTIMONIOS/REELS_FINALES/`
 - Textos posts: `MARC/CONTENIDO/02_EN_PRODUCCION/` (C-004..C-017, R-001..R-003)
 - Para aprobar: `MARC/CONTENIDO/03_PARA_APROBAR/` (C-001..C-003)

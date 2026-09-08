@@ -5,7 +5,7 @@
 ---
 
 ## FICHA 1: MARC_1_MINUTO.md
-- **RUTA:** MARC/MARC_1_MINUTO.md | **TIPO:** Texto | **EXT:** .md
+- **RUTA:** MARC/01_Contexto_Alineacion/MARC_1_MINUTO.md | **TIPO:** Texto | **EXT:** .md
 - **QUÉ ES:** Resumen ejecutivo de 1 minuto del cliente MARC.
 - **DE QUÉ TRATA:** Síntesis del negocio Reconecta-T: Marc vende formación online high-ticket de transformación mental/emocional (Biodescodificación celular). Programa "Despierta" a 1.497€. Colaboración con Escala con Ads. Sebastián Bayona como asistente virtual.
 - **OBJETIVO:** Dar visión rápida del estado del cliente.
