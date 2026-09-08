@@ -1,43 +1,41 @@
-# DÓNDE ESTÁ TODO — MARC
+# DÓNDE ESTÁ TODO — MARC (mapa único, actualizado 8-sep)
 
-> Mapa simple de la carpeta MARC. Nada se ha movido ni borrado: esto solo explica.
+> 25 carpetas numeradas + 8 archivos. Si buscas algo y no está aquí, no existe.
 
-## Para publicar HOY (la cola)
-- `MARC/CONTENIDO/KIT_PUBLICACION_10MIN.md` → plan día por día: copiar, pegar, subir.
-- Reels (4, con hook + CTA ya dentro): `MARC/21_TESTIMONIOS/REELS_FINALES/`
-- Textos posts: `MARC/CONTENIDO/02_EN_PRODUCCION/` (C-004..C-017, R-001..R-003)
-- Para aprobar: `MARC/CONTENIDO/03_PARA_APROBAR/` (C-001..C-003)
-- Ya aprobados / ya publicados: `MARC/CONTENIDO/04_APROBADO/` y `05_PUBLICADO/` (vacíos = nada aprobado aún)
-- Stories semanas 1-3: `MARC/CONTENIDO/06_STORIES/`
-- Guion de ventas por DM: `MARC/CONTENIDO/07_PLANTILLAS/GUION_VENTAS_DM_DESPIERTA.md`
+## 🎯 Operativa diaria (lo que se toca cada día)
+- `PLAN_MAESTRO_MARC.md` → el plan: qué hay, qué falta, próximos 7 días
+- `PENDIENTE_SEBASTIAN.md` → 7 tareas de móvil (bio, enlace, fijar...)
+- `ORDEN_SUBIDA_2026-09-07.md` → qué subir y en qué orden + protocolo DESPIERTA
+- `LEADS_REGISTRO.md` → marcador de clientes (0-0)
+- `KIT_PUBLICACION_10MIN.md` → en `CONTENIDO/` (plan día por día)
 
-## Instagram
-- Estado y pendientes de móvil: `MARC/PENDIENTE_SEBASTIAN.md`
-- Registro de las 43 acciones hechas: `MARC/18_LOGS/ACCIONES_EJECUTADAS_MARC.md`
-- Auditoría + calendario + borradores: `MARC/04_Instagram/`
-- Imágenes: `MARC/04_Instagram/ASSETS/` (IA_DRAFTS, HIGHLIGHT_COVERS, LANZAMIENTO, QR)
+## 📣 Contenido (la fábrica)
+- `CONTENIDO/` → pipeline ideas→producción→aprobar + banco + 17 piezas + stories + plantillas (guion ventas, hashtags) + `08_POSTS_DIARIOS/` (7-13 sep listos)
+- `26_CLON_MARC/` → protocolo 1-prompt + generador + `HISTORIAS/` (Marc 7-13 sep)
+- `04_Instagram/` → auditoría, calendario, borradores + `ACCIONES_EJECUTADAS_MARC.md` (43 acciones) + assets (QR, portadas, IA, lanzamiento)
 
-## Producto Despierta
-- `MARC/20_PRODUCTO_DESPIERTA/` → currículo, herramientas, mentoría, charlas, webinar, proceso completo
-- `MARC/21_TESTIMONIOS/` → vídeos + versiones web + clips + reels finales
-- `MARC/22_LEAD_MAGNET_EBOOK/` → e-book «La Loca en Tu Cabeza» ES + EN
-- `MARC/23_ESTRATEGIA_NEGOCIO/` → análisis IA + estrategia de redes + publicidad
-- `MARC/24_MEDIA/` → podcasts + talleres
-- `MARC/25_MARCA_PERSONAL/` → CV + diplomas
-- `MARC/26_CLON_MARC/` → protocolo historia diaria + informe herramientas clon
-- `MARC/27_BRAND_KIT/` → logos + plantillas + manual (negro/ámbar)
-- `MARC/28_PRESENTACION/` → presentación webinar (v4 vigente + medios + guion) — ver `LEEME.md`
-- `MARC/29_DRIVE/` → espejo del Google Drive (fotos, guiones, vídeos, docs)
-- `MARC/30_RELOJ_MANILLA/` → proyecto reloj/manilla CALMA (antes 27_RELOJ_MANILLA, renombrado 7/9)
+## 💰 Producto y venta (lo que vende)
+- `20_PRODUCTO_DESPIERTA/` → currículo LEC 1-10 + herramientas + mentoría + charlas + proceso + webinar + ODT prácticas
+- `21_TESTIMONIOS/` → 4 originales (806 MB) + web + reels 30 s + v2 + clips
+- `22_LEAD_MAGNET_EBOOK/` → «La Loca en Tu Cabeza» ES+EN (regalo DESPIERTA)
+- `23_ESTRATEGIA_NEGOCIO/` → estrategia redes + 6 análisis IA + publicidad
+- `24_MEDIA/` → fotos + 4 podcasts + 5 talleres (1,6 GB)
+- `25_MARCA_PERSONAL/` → CV + 6 diplomas
 
-## Web y App (ya online)
-- `MARC/WEB_DESPIERTA/` → landing https://despierta-marc.netlify.app
-- `MARC/APP_DESPIERTA/` → app https://despierta-app.netlify.app (+ `/watch`)
-- ZIPs viejos del 4/9 → `MARC/00_DESCARTADO/` (redundantes, verificado por hash 7/9)
+## 🎨 Marca y web (lo que se ve)
+- `27_BRAND_KIT/` → logos, plantillas, manual + pack pro (fuentes, LUTs cine)
+- `28_PRESENTACION/` → v6 vigente + PDF + original + medios + guion literal + versiones
+- `WEB_DESPIERTA/` → landing online + ebook + verificador
+- `APP_DESPIERTA/` → app + reloj + audios + proyecto manilla (anexo)
 
-## Contexto y auditoría (historia, no tocar)
-- `MARC/00_AUDITORIA_MAESTRA/` + `05_..17_*.md` (mapas, riesgos, preguntas, plan)
-- `MARC/01_Contexto_Alineacion/` + `02_Informes_Sesiones/` + `1 DÍA 04-05-2026/`
-- `MARC/01_Contexto_Alineacion/100 COSAS PARA HACER.txt` → 1.000 tareas para ayudar a Marc (traído de Legal 7/9)
-- `MARC/03_Chat_WhatsApp_MARC/` → export único fusionado (canónico + 166 únicos del otro) + transcripts de audios
-- `MARC/00_DESCARTADO/` → cuarentena (chat viejo, ZIPs viejos, intentos fallidos). Nada se borra.
+## 📦 Fuente y contexto (historia, no tocar)
+- `00_AUDITORIA_MAESTRA/` → auditoría + 13 mapas (embudo, KPIs, riesgos...)
+- `01_Contexto_Alineacion/` → Docs 1-3, alineación, Marc.pdf, planes, 100 COSAS
+- `02_Informes_Sesiones/` → informes de sesiones
+- `1 DÍA 04-05-2026/` → 3 PDFs primera entrega
+- `03_Chat_WhatsApp_MARC/` → chat único fusionado (+ zip copia)
+- `29_DRIVE/` → espejo Drive (guiones, fotos, testimonios, ventas, reels + editados)
+- `30_RELOJ_MANILLA/` → (vacía, contenido en APP_DESPIERTA; borrar con Explorador cerrado)
+- `18_LOGS/`, `03_Conversaciones/`, `00_ASSETS_PRO/` → (vacías, fusionadas; borrar igual)
+- `00_DESCARTADO/` → cuarentena (nada se borra sin pasar por aquí)
+- `.github/`, `.mcp-sqlite/`, `.mimosa/`, `AGENTS.md`, `TOKENROUTER*`, `.mcp.json` → tooling (no tocar)

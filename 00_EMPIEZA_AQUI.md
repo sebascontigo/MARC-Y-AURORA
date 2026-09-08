@@ -9,20 +9,12 @@ MARC Y AURORA/
 │                                       DECISIONS · ASSETS · ACCESS · KPIS · ROADMAP
 ├── CALENDARIO_SEMANA_2026-09-07.md  ← qué se publica cada día ESTA semana
 │
-├── MARC/                            ← CLIENTE 1 (todo suyo, numerado)
-│   ├── 00_DONDE_ESTA_TODO.md        ← su mapa interior
-│   ├── 00_AUDITORIA_MAESTRA + 01_Contexto + 02_Informes + 1 DÍA 04-05 (histórico)
-│   ├── 03_Chat_WhatsApp_MARC        ← el chat fusionado (único)
-│   ├── 04_Instagram                 ← auditoría + calendario + borradores
-│   ├── 18_LOGS                      ← registro de acciones ejecutadas
-│   ├── 20_PRODUCTO_DESPIERTA … 30_RELOJ_MANILLA  ← producto/testimonios/ebook/
-│   │                                   estrategia/media/marca/clon/brandkit/presentación/drive/reloj
-│   ├── CONTENIDO/                   ← pipeline: ideas→producción→aprobar→publicado
-│   │   └── 08_POSTS_DIARIOS         ← POSTS del día (7-13 sep GENERADOS)
-│   ├── HISTORIAS/                   ← historias Aurora generadas (ver AURORA)
-│   ├── 26_CLON_MARC/HISTORIAS/      ← historias Marc generadas (7-13 sep)
-│   ├── APP_DESPIERTA + WEB_DESPIERTA ← app y landing (online)
-│   └── 00_DESCARTADO                ← cuarentena (chats viejos, zips viejos, intentos)
+├── MARC/                            ← CLIENTE 1 (ver `MARC/PLAN_MAESTRO_MARC.md` + `MARC/00_DONDE_ESTA_TODO.md`)
+│   ├── PLAN + PENDIENTE + ORDEN_SUBIDA + LEADS (operativa diaria)
+│   ├── CONTENIDO/ + 26_CLON_MARC/HISTORIAS/ (fábrica + historias diarias)
+│   ├── 20_PRODUCTO … 29_DRIVE (producto, testimonios, ebook, estrategia, media, marca, clon, brand, presentación, drive)
+│   ├── 04_Instagram/ (auditoría, calendario, 43 acciones) + WEB + APP (online)
+│   └── 00_AUDITORIA + 01_Contexto + 02_Informes + 1 DÍA + 03_Chat (historia)
 │
 ├── AURORA/                          ← CLIENTE 2 (espejo)
 │   ├── 00_DONDE_ESTA_TODO + 00_AUDITORIA_MAESTRA

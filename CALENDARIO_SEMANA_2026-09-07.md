@@ -29,7 +29,7 @@
 
 | Día | Post 4:5 | Historia 9:16 | Pilar |
 |---|---|---|---|
-| Dom 7 | `AURORA/07_POSTS_DIARIOS/2026-09-07` | `MARC/HISTORIAS/.../aurora` (generada con su tema) | Dolor |
+| Dom 7 | `AURORA/07_POSTS_DIARIOS/2026-09-07` | `AURORA/HISTORIAS/.../aurora` (generada con su tema) | Dolor |
 | Lun 8 | `.../2026-09-08` | `HISTORIAS/2026-09-08` | Dolor |
 | Mar 9 | `.../2026-09-09` | `HISTORIAS/2026-09-09` | Educación |
 | Mié 10 | `.../2026-09-10` | `HISTORIAS/2026-09-10` | Método |
