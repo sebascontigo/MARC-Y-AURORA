@@ -61,3 +61,5 @@ MARC/29_DRIVE/Testimonios/
 # Ruido Windows/Python
 desktop.ini
 __pycache__/
+# Intermedios de montaje de video (regenerables)
+**/_todo_tmp/
