@@ -16,7 +16,8 @@
 
 ## 💰 Producto y venta (lo que vende)
 - `20_PRODUCTO_DESPIERTA/` → currículo LEC 1-10 + herramientas + mentoría + charlas + proceso + webinar + ODT prácticas
-- `21_TESTIMONIOS/` → 4 originales (806 MB) + web + reels 30 s + v2 + clips
+- `21_TESTIMONIOS/` → 4 originales + web + reels 30 s + v2 4/4 + clips
+- `00_MUSICA/` → pad ambiente 70 s (fondo libre para reels)
 - `22_LEAD_MAGNET_EBOOK/` → «La Loca en Tu Cabeza» ES+EN (regalo DESPIERTA)
 - `23_ESTRATEGIA_NEGOCIO/` → estrategia redes + 6 análisis IA + publicidad
 - `24_MEDIA/` → fotos + 4 podcasts + 5 talleres (1,6 GB)
@@ -24,7 +25,8 @@
 
 ## 🎨 Marca y web (lo que se ve)
 - `27_BRAND_KIT/` → logos, plantillas, manual + pack pro (fuentes, LUTs cine)
-- `28_PRESENTACION/` → v6 vigente + PDF + original + medios + guion literal + versiones
+- `28_PRESENTACION/` → v7 FIEL vigente (11 slides exactas de Marc) + PDF + original + medios + guion literal + versiones
+- `31_REBRAND_V2/` → propuesta turquesa (logos, 4 plantillas, 6 burbujas highlights, demos) — presentar, no imponer
 - `WEB_DESPIERTA/` → landing online + ebook + verificador
 - `APP_DESPIERTA/` → app + reloj + audios + proyecto manilla (anexo)
 
@@ -34,7 +36,7 @@
 - `02_Informes_Sesiones/` → informes de sesiones
 - `1 DÍA 04-05-2026/` → 3 PDFs primera entrega
 - `03_Chat_WhatsApp_MARC/` → chat único fusionado (+ zip copia)
-- `29_DRIVE/` → espejo Drive (guiones, fotos, testimonios, ventas, reels + editados)
+- `29_DRIVE/` → espejo Drive (guiones, fotos, testimonios, ventas) + `WOW_REELS/` 11/11 listos (mp4 52 s + srt + portada + caption + hook + cta)
 - `30_RELOJ_MANILLA/` → (vacía, contenido en APP_DESPIERTA; borrar con Explorador cerrado)
 - `18_LOGS/`, `03_Conversaciones/`, `00_ASSETS_PRO/` → (vacías, fusionadas; borrar igual)
 - `00_DESCARTADO/` → cuarentena (nada se borra sin pasar por aquí)
