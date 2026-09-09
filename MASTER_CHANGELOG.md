@@ -3,6 +3,17 @@
 > Formato: FECHA · CAMBIO · MOTIVO · RESULTADO · ARCHIVOS · RESPONSABLE · SIGUIENTE PASO.
 > Solo cambios importantes. No registrar lecturas ni consultas.
 
+## 2026-09-09 (rehecho total minimalista: 4 v2 + 11 WOW sin texto quemado)
+
+| Campo          | Detalle |
+| -------------- | ------- |
+| CAMBIO         | **28 archivos con texto quemado a cuarentena** (`00_DESCARTADO/reels_con_texto_20260909/` + manifiesto, reversible, nada borrado): v1 x4 + v2 x4 + 11 WOW + win.srt. **4 v2 minimalistas rehechos** desde brutos (fragmentos oro, fondo desenfocado, SOLO subtítulos finos Montserrat 18 abajo, loudnorm, faststart). **11 WOW minimalistas rehechos** desde `Videos_Reels/` (52s, 1080x1920, solo subtítulos finos, sin hook/CTA/marca quemados; hook+CTA viven en portada+caption). Horizontales (Terapia 1, Tu cuerpo 1) con fondo desenfocado. Transcripciones Whisper guardadas (`TRANSCRIPCION_*`, `FULL_*`). |
+| MOTIVO         | Orden de Sebastián: todo mal con letras por todo el vídeo → minimalista y elegante, desde los brutos limpios, borrar lo que no sirve (cuarentena, no borrado). Sin instalar nada: el stack actual lo hace y es gratis. |
+| RESULTADO      | 15/15 verificados ffprobe (TODO_OK). Pendiente su ojo en 1-2 piezas antes de subir en masa. |
+| ARCHIVOS       | `REELS_FINALES/*_v2.mp4` (nuevos) · `WOW_REELS/0*..11*_WOW.mp4` (nuevos) + srt + FULL + portada + caption + hook + cta · `21_TESTIMONIOS/TRANSCRIPCION_*` · `CAPTIONS_Y_PROTOCOLO.md` · este changelog |
+| RESPONSABLE    | Agente |
+| SIGUIENTE PASO | Su revisión visual → subida (app/accesos) · Enviar v7 · Crisis 6/9. |
+
 ## 2026-09-09 (producción total vídeos: 4/4 testimonios v2 + 11/11 WOW + burbujas)
 
 | Campo          | Detalle                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
